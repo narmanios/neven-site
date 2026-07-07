@@ -1,0 +1,559 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg: #ffffff;
+  --text-color: #000000;
+  --text-secondary: #666666;
+  --hover-color: #333333;
+  --border-color: #e5e5e5;
+  --spacing-unit: 8px;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Header */
+.header {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.site-title {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+
+.site-title a {
+  color: var(--text-color);
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+}
+
+.main-nav a,
+.main-nav button {
+  font-size: 18px;
+  font-weight: 400;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  font-family: inherit;
+}
+
+.work-toggle {
+  display: none;
+}
+
+.work-toggle::after {
+  content: " ▾";
+  font-size: 14px;
+}
+
+.subtitle {
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.subtitle a {
+  color: var(--text-color);
+}
+
+/* Main Content */
+.main-content {
+  padding: 60px 0 100px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.portfolio-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.portfolio-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover img {
+  transform: scale(1.02);
+}
+
+.portfolio-category {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 40px 0;
+}
+
+.contact-section h6 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.contact-section a {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border-color);
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.social-bar {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.social-bar a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.social-bar a:hover {
+  opacity: 1;
+}
+
+.social-bar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .header {
+    padding: 40px 0 30px;
+  }
+
+  .site-title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .main-nav ul {
+    gap: 20px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .main-content {
+    padding: 40px 0 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .site-title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .main-nav a,
+  .main-nav button {
+    font-size: 16px;
+  }
+
+  .branding {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* About Page */
+.about-page {
+  padding: 80px 0 100px;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: var(--text-color);
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.main-nav .active {
+  font-weight: 600;
+  position: relative;
+}
+
+.main-nav .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--text-color);
+}
+
+/* About Page Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image img {
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+
+  .about-page {
+    padding: 60px 0 80px;
+  }
+}
+
+/* Portfolio Detail Page Template */
+.project-page {
+  padding: 80px 0 100px;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.project-title {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.project-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-meta-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.project-meta-value {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.project-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-section {
+  margin-bottom: 80px;
+}
+
+.project-section h3 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.project-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.project-image {
+  width: 100%;
+  margin: 40px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-image-caption {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.project-images-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.project-images-row .project-image {
+  flex: 0 1 calc(33.333% - 14px);
+  max-width: 300px;
+  margin: 0;
+}
+
+.notion-link-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 48px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+}
+
+.notion-link-card h3 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.notion-link-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+
+.notion-link-button {
+  display: inline-block;
+  background: white;
+  color: #667eea;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.notion-link-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #667eea;
+}
+
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 80px;
+}
+
+.project-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.project-nav-link:hover {
+  transform: translateX(-4px);
+}
+
+.project-nav-link.next:hover {
+  transform: translateX(4px);
+}
+
+/* Project Detail Page Responsive */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 36px;
+  }
+
+  .project-meta {
+    gap: 24px;
+  }
+
+  .project-section h3 {
+    font-size: 28px;
+  }
+
+  .project-section p {
+    font-size: 16px;
+  }
+
+  .project-page {
+    padding: 60px 0 80px;
+  }
+
+  .project-navigation {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .notion-link-card {
+    padding: 32px 24px;
+  }
+
+  .notion-link-button {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}

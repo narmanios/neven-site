@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agentic Driven Design - Product Design by Neven Armanios">
+    <title>Agentic Driven Design | Neven Armanios</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="branding">
+                    <h1 class="site-title"><a href="../index.html">Neven Armanios</a></h1>
+                    <nav class="main-nav">
+                        <ul>
+                            <li>
+                                <button class="work-toggle" id="workToggle">Work</button>
+                            </li>
+                            <li><a href="../about.html">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <h2 class="subtitle"><a href="../index.html">Product Designer</a></h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content project-page">
+        <div class="container">
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1 class="project-title">Agentic Driven Design</h1>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span class="project-meta-label">Type</span>
+                        <span class="project-meta-value">Product Design</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span class="project-meta-label">Link</span>
+                        <span class="project-meta-value"><a
+                                href="https://www.figma.com/proto/en3cPRSR5AM0ZocyLFRnn5/Case-Studies-June-26?node-id=4036-67704&viewport=-1549%2C821%2C0.13&t=a5YQzxjow4u5DIFd-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=4036%3A67704&page-id=4030%3A15722&show-proto-sidebar=1"
+                                target="_blank">View Prototype →</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-content">
+                <!-- Hero Image -->
+                <div class="project-image">
+                    <img src="../images/agentic-thumbnail.jpg" alt="Agentic Driven Design">
+                </div>
+
+                <!-- Challenge Section -->
+                <section class="project-section">
+                    <h3>The Challenge</h3>
+                    <p>The advertising stack at the company had grown into a collection of siloed tools, each doing its
+                        job well but in isolation. Each product module, as part of the larger ecosystem, had a data
+                        source with different schemas, different levels of granularity.</p>
+
+                    <p>The question wasn't just "how do we build a chat?" — it was "how do we make the AI know which
+                        data answers which question?" We needed a routing and synthesis layer, not just a UI wrapper.
+                        Each module would have to have its own agent. The complexity had to disappear for the end user,
+                        even if it lived under the hood.</p>
+
+                    <div class="project-image">
+                        <img src="../images/agentic-modules.png" alt="Modules">
+                        <p class="project-image-caption">Fragmented tools and data sources</p>
+                    </div>
+                </section>
+
+                <!-- Solution Section -->
+                <section class="project-section">
+                    <h3>Solution</h3>
+                    <p>Build a single conversational AI interface that abstracts the fragmentation underneath. The AI
+                        would have to reason across multiple data sources pulling from the right tool, and synthesizing
+                        a coherent answer.</p>
+
+                    <p>One natural-language entry point for any advertising question, regardless of where the data
+                        lives. The goal wasn't to replace the tools it was to make their combined intelligence
+                        accessible to anyone, instantly.</p>
+
+                    <div class="project-image">
+                        <img src="../images/agentic-welcome.png" alt="Welcome Interface">
+                        <p class="project-image-caption">AI assistant welcome screen</p>
+                    </div>
+                </section>
+
+                <!-- Inputs vs Outputs Section -->
+                <section class="project-section">
+                    <h3>Inputs vs Outputs</h3>
+                    <p>For every module we considered what the input in the AI chat would be and what the output AI
+                        response should be.</p>
+
+                    <p>The scripting process was about documenting institutional knowledge. Media planners, analysts,
+                        and strategists all contributed questions from their domain. Scripts became the bridge between
+                        human expertise and machine intelligence.</p>
+
+                    <div class="project-image">
+                        <img src="../images/agentic-inputs-outputs-1.png" alt="Inputs and Outputs">
+                        <p class="project-image-caption">Mapping user inputs to AI outputs</p>
+                    </div>
+                </section>
+
+                <!-- Prompts Section -->
+                <section class="project-section">
+                    <h3>Prompts</h3>
+                    <p>We included deterministic prompts that previous research studies uncovered as questions many of
+                        our users will ask and need answers to.</p>
+
+                    <div class="project-image">
+                        <img src="../images/agentic-shortcuts.png" alt="Shortcuts">
+                        <p class="project-image-caption">Quick access shortcuts for common queries</p>
+                    </div>
+                </section>
+
+                <!-- Guided Experience Section -->
+                <section class="project-section">
+                    <h3>Guided Experience</h3>
+                    <p>Users were guided through the chat with clarifying questions the AI would ask. This way the
+                        responses would not only serve the user better it would allow for filtering of the huge datasets
+                        running in the background.</p>
+
+                    <div class="project-image">
+                        <img src="../images/agentic-chat-1.png" alt="Chat Experience">
+                        <p class="project-image-caption">AI asking clarifying questions to refine results</p>
+                    </div>
+                </section>
+
+                <!-- Long-term Design Section -->
+                <section class="project-section">
+                    <h3>Long-term Agentic Design</h3>
+                    <p>Each tool in our product line would be surfaced through the AI responses to help our users
+                        strategically plan their campaigns. Again the clarifying questions the AI would ask further
+                        filtered our large datasets.</p>
+
+                    <div class="project-image">
+                        <img src="../images/agentic-longterm-1.jpg" alt="Long-term Vision">
+                        <p class="project-image-caption">Future state with full agent integration</p>
+                    </div>
+                </section>
+
+                <!-- Short-term Design Section -->
+                <section class="project-section">
+                    <h3>Short-term Agentic Design</h3>
+                    <p>To move quickly we designed a short term execution that allowed users to jump into our AI
+                        Research Assistant and ask any questions they wanted or explore our multiple tools through the
+                        AI guided experience.</p>
+
+                    <p>If a user chose to explore what was available as a tool in our platform again they were offered
+                        pre-defined prompts. Whether they used the pre-defined prompts or wrote their own in the chat,
+                        they would be guided to the specific module that would best serve their goals.</p>
+
+                    <div class="project-image">
+                        <img src="../images/agentic-modal-1.jpg" alt="Short-term Implementation">
+                        <p class="project-image-caption">MVP chat modal interface</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Project Navigation -->
+            <nav class="project-navigation">
+                <a href="./women-climate.html" class="project-nav-link back">
+                    ← Previous Project
+                </a>
+                <a href="./lifetime-movie-club.html" class="project-nav-link next">
+                    Next Project →
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Neven Armanios</p>
+            <ul class="social-bar">
+                <li>
+                    <a href="https://www.linkedin.com/in/nevenarmanios/" target="_blank" rel="noopener noreferrer">
+                        <img src="../images/linkedin-icon.svg" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../password-protection.js"></script>
+</body>
+
+</html>

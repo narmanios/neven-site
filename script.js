@@ -1,0 +1,91 @@
+// Portfolio Website JavaScript
+
+// Work Toggle Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const workToggle = document.getElementById("workToggle");
+
+  if (workToggle) {
+    workToggle.addEventListener("click", function () {
+      // Toggle functionality can be expanded based on requirements
+      // For now, it's a placeholder that could show/hide portfolio items
+      // or navigate to a filtered view
+      console.log("Work toggle clicked");
+
+      // Example: Add active state
+      this.classList.toggle("active");
+    });
+  }
+
+  // Smooth scroll for anchor links
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  anchorLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href !== "#") {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
+    });
+  });
+
+  // Lazy loading images for better performance
+  const images = document.querySelectorAll(".portfolio-link img");
+
+  if ("IntersectionObserver" in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute("data-src");
+          }
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach((img) => {
+      imageObserver.observe(img);
+    });
+  }
+
+  // Add animation on scroll for portfolio items
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+  const itemObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    },
+  );
+
+  portfolioItems.forEach((item, index) => {
+    item.style.opacity = "0";
+    item.style.transform = "translateY(20px)";
+    item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    itemObserver.observe(item);
+  });
+});
+
+// Handle external links
+document.addEventListener("click", function (e) {
+  const link = e.target.closest('a[target="_blank"]');
+  if (link) {
+    // Add any additional handling for external links if needed
+    console.log("External link clicked:", link.href);
+  }
+});
