@@ -106,6 +106,14 @@ a:hover {
   color: var(--text-color);
 }
 
+.tagline {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-color);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
 /* Main Content */
 .main-content {
   padding: 60px 0 100px;
@@ -248,6 +256,12 @@ a:hover {
 
   .subtitle {
     font-size: 24px;
+  }
+  .tagline {
+    font-size: 13px;
+  }
+  .tagline {
+    font-size: 14px;
   }
 
   .main-nav ul {
