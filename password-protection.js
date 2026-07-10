@@ -48,11 +48,12 @@
   backLink.href = "../index.html";
   backLink.textContent = "← Back to Home";
   backLink.style.cssText = `
-        display: inline-block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
         font-size: 14px;
         color: #666;
         text-decoration: none;
-        margin-bottom: 20px;
         font-family: "Helvetica Neue", Arial, sans-serif;
         transition: color 0.2s;
     `;
@@ -130,11 +131,11 @@
   });
 
   container.appendChild(title);
-  container.appendChild(backLink);
   container.appendChild(message);
   container.appendChild(input);
   container.appendChild(button);
   container.appendChild(errorMsg);
+  overlay.appendChild(backLink);
   overlay.appendChild(container);
   document.body.appendChild(overlay);
 
