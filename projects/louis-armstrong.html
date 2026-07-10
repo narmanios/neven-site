@@ -39,7 +39,7 @@
                 <div class="project-meta">
                     <div class="project-meta-item">
                         <span class="project-meta-label">Type</span>
-                        <span class="project-meta-value">Data Visualization · JavaScript</span>
+                        <span class="project-meta-value">Data Visualization · Thesis</span>
                     </div>
                     <div class="project-meta-item">
                         <span class="project-meta-label">Link</span>
@@ -62,58 +62,83 @@
                 <!-- Overview Section -->
                 <section class="project-section">
                     <h3>Overview</h3>
-                    <p>This project seeks to bring greater attention to Louis Armstrong's role as an ambassador by
-                        examining how his career helped carry jazz and American culture across the world. It aims to
-                        show that Armstrong was more than an entertainer. He was a central figure in the making of
-                        modern American cultural identity at home and abroad.</p>
+                    <p>This project is my Master's thesis for the MS in Data Visualization at Parsons School of
+                        Design, presented at the 2026 Keynotes. It brings greater attention to Louis Armstrong's role as
+                        a cultural ambassador by examining how his career helped carry jazz and American culture across
+                        the world. Through data and archival research, it argues that Armstrong was more than an
+                        entertainer. He was a central figure in the making of modern American cultural identity at home
+                        and abroad.</p>
 
-                    <p>By tracing his rise from New Orleans to international fame, his official Africa tour, his
-                        involvement in The Real Ambassadors, and the lasting afterlife of his music, the project reveals
-                        how Armstrong's work shaped the global image of the United States while also exposing the
-                        contradictions within that image.</p>
-                </section>
-
-                <!-- Approach Section -->
-                <section class="project-section">
-                    <h3>Approach</h3>
-                    <p>By combining biography with data-driven presentation, it helps viewers see how Armstrong's music
-                        evolved and how his influence spread across jazz and popular music. The result is both an
-                        educational tribute and an interactive way to explore the life of one of the most important
-                        figures in American music.</p>
-
-                    <p>Through a combination of archival research, historical analysis, and data visualization, this
-                        project offers a new interpretation of Louis Armstrong as a foundational cultural figure whose
-                        influence continues to resonate today.</p>
-                </section>
-
-                <!-- Visuals Section -->
-                <section class="project-section">
-
-                    <div class="project-image">
-                        <img src="../images/louis-armstrong-hero.png" alt="Career Highlights">
-                        <p class="project-image-caption">Re-recordings of iconic song "What a Wonderful World"</p>
+                    <p>I approached this as a data project first and a design project second. Using Python notebooks, I
+                        parsed and analyzed data pulled together from multiple sources — The Louis
+                        Armstrong House Museum archives, published discographies, and film records gathered from IMDb —
+                        cleaning and reconciling formats that were never meant to sit together. From that analysis I
+                        produced structured JSON files: one clean data model per visualization, shaped specifically for
+                        what each view needed to show.</p>
+                    <section class="project-section">
+                        <h3>Sketches</h3>
+                        Before writing any display code, I sketched each visualization by hand. Working the ideas out on
+                        paper let me test which chart forms actually surfaced the story, the reach of the tours, the
+                        volume of recordings, the gap between the ambassador image and the reality before committing
+                        them to code. Once a sketch earned its place, I designed and built that visualization from the
+                        JSON, tuning the interaction and the visual detail directly in the browser.</p>
+                    </section>
+                    <div class="project-image" style="max-width: 80%; margin-left: auto; margin-right: auto;">
+                        <img src="../images/louis-armstrong-sketch-www.jpg" alt="Whata Wonderful World Sketch">
+                        <p class="project-image-caption">What a Wonderful World Sketch</p>
+                    </div>
+                    <div class="project-image" style="max-width: 80%; margin-left: auto; margin-right: auto;">
+                        <img src="../images/louis-armstrong-sketch-timeline.jpg" alt="Timeline Sketch">
+                        <p class="project-image-caption">Timeline Sketch</p>
                     </div>
 
-                    <div class="project-image">
-                        <img src="../images/louis-armstrong-career.png" alt="Career Highlights">
-                        <p class="project-image-caption">Timeline of career highlights and achievements</p>
+                    <div class="project-image" style="max-width: 80%; margin-left: auto; margin-right: auto;">
+                        <img src="../images/louis-armstrong-sketch-map.jpg" alt="Map Sketch">
+                        <p class="project-image-caption">Map Sketch</p>
                     </div>
+                    <!-- Approach Section -->
+                    <section class="project-section">
+                        <h3>Approach</h3>
+                        <p>By combining biography with data-driven presentation, it helps viewers see how Armstrong's
+                            music
+                            evolved and how his influence spread across jazz and popular music. The result is both an
+                            educational tribute and an interactive way to explore the life of one of the most important
+                            figures in American music.</p>
 
-                    <div class="project-image">
-                        <img src="../images/louis-armstrong-ambassador.png" alt="Ambassador Tours">
-                        <p class="project-image-caption">Armstrong's role as cultural ambassador</p>
-                    </div>
+                        <p>Through a combination of archival research, historical analysis, and data visualization, this
+                            project offers a new interpretation of Louis Armstrong as a foundational cultural figure
+                            whose
+                            influence continues to resonate today.</p>
+                    </section>
 
-                    <div class="project-image">
-                        <img src="../images/louis-armstrong-map.png" alt="Global Impact">
-                        <p class="project-image-caption">Interactive map of worldwide tours and influence</p>
-                    </div>
+                    <!-- Visuals Section -->
+                    <section class="project-section">
 
-                    <div class="project-image">
-                        <img src="../images/louis-armstrong-legacy.png" alt="Musical Legacy">
-                        <p class="project-image-caption">Visualizing Armstrong's lasting influence on music</p>
-                    </div>
-                </section>
+                        <div class="project-image">
+                            <img src="../images/louis-armstrong-hero.png" alt="Career Highlights">
+                            <p class="project-image-caption">Re-recordings of iconic song "What a Wonderful World"</p>
+                        </div>
+
+                        <div class="project-image">
+                            <img src="../images/louis-armstrong-career.png" alt="Career Highlights">
+                            <p class="project-image-caption">Timeline of career highlights and achievements</p>
+                        </div>
+
+                        <div class="project-image">
+                            <img src="../images/louis-armstrong-ambassador.png" alt="Ambassador Tours">
+                            <p class="project-image-caption">Armstrong's role as cultural ambassador</p>
+                        </div>
+
+                        <div class="project-image">
+                            <img src="../images/louis-armstrong-map.png" alt="Global Impact">
+                            <p class="project-image-caption">Interactive map of worldwide tours and influence</p>
+                        </div>
+
+                        <div class="project-image">
+                            <img src="../images/louis-armstrong-legacy.png" alt="Musical Legacy">
+                            <p class="project-image-caption">Visualizing Armstrong's lasting influence on music</p>
+                        </div>
+                    </section>
             </div>
 
             <!-- Project Navigation -->
