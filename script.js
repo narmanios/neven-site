@@ -89,3 +89,18 @@ document.addEventListener("click", function (e) {
     console.log("External link clicked:", link.href);
   }
 });
+
+// Handle external links with confirmation
+document.addEventListener("click", function (e) {
+  const link = e.target.closest('a[data-confirm="true"]');
+  if (link) {
+    e.preventDefault();
+    const projectName = link.querySelector("img")?.alt || "this project";
+    const confirmed = confirm(
+      `You are about to leave this site to view ${projectName}. Continue?`,
+    );
+    if (confirmed) {
+      window.open(link.href, "_blank");
+    }
+  }
+});
