@@ -437,9 +437,7 @@ a:hover {
 .project-image {
   width: 100%;
   margin: 40px 0;
-  border-radius: 8px;
   overflow: visible;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-image img {
@@ -447,11 +445,20 @@ a:hover {
   height: auto;
   display: block;
   border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-image video {
   display: block;
   border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-image iframe {
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 .project-image-caption {
