@@ -438,7 +438,7 @@ a:hover {
   width: 100%;
   margin: 40px 0;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -446,6 +446,12 @@ a:hover {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px;
+}
+
+.project-image video {
+  display: block;
+  border-radius: 8px;
 }
 
 .project-image-caption {
@@ -454,6 +460,7 @@ a:hover {
   text-align: center;
   margin-top: 12px;
   font-style: italic;
+  line-height: 1.5;
 }
 
 .project-images-row {
