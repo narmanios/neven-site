@@ -449,7 +449,7 @@ a:hover {
 }
 
 .project-image-caption {
-  font-size: 14px;
+  font-size: 14px !important;
   color: var(--text-secondary);
   text-align: center;
   margin-top: 12px;
@@ -553,7 +553,7 @@ a:hover {
   }
 
   .project-image-caption {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 
   .project-page {
