@@ -44,6 +44,25 @@
         font-family: "Helvetica Neue", Arial, sans-serif;
     `;
 
+  const backLink = document.createElement("a");
+  backLink.href = "../index.html";
+  backLink.textContent = "← Back to Home";
+  backLink.style.cssText = `
+        display: inline-block;
+        font-size: 14px;
+        color: #666;
+        text-decoration: none;
+        margin-bottom: 20px;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        transition: color 0.2s;
+    `;
+  backLink.addEventListener("mouseover", function () {
+    backLink.style.color = "#000";
+  });
+  backLink.addEventListener("mouseout", function () {
+    backLink.style.color = "#666";
+  });
+
   const message = document.createElement("p");
   message.textContent =
     "This project is password protected. Please enter the password to continue.";
@@ -111,6 +130,7 @@
   });
 
   container.appendChild(title);
+  container.appendChild(backLink);
   container.appendChild(message);
   container.appendChild(input);
   container.appendChild(button);
