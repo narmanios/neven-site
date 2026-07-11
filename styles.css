@@ -60,6 +60,30 @@ a:hover {
   gap: 12px;
 }
 
+.name-with-photo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.photo-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.profile-photo-header {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  margin-top: -5px;
+}
+
 .site-title {
   font-size: 48px;
   font-weight: 400;
