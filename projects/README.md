@@ -11,12 +11,12 @@ Each project has its own HTML file based on the `project-template.html` template
 Create or update these files for each portfolio item:
 
 1. **segment-opportunity-simulator.html** - Segment Opportunity Simulator (Product Design)
-2. **silhouette-art.html** - Silhouette Art (Data Viz + AI)
-3. **louis-armstrong.html** - Louis Armstrong (Data Viz)
+2. **silhouette-art.html** - Silhouette Art (Data Visualization + AI)
+3. **louis-armstrong.html** - Louis Armstrong (Data Visualization)
 4. **persona-pathways.html** - Persona Pathways (Product Design)
 5. **history-vault.html** - HISTORY Vault (Product Design)
 6. **machine-learning.html** - Machine Learning (AI/ML)
-7. **women-climate.html** - Women and Climate Change (Data Viz)
+7. **women-climate.html** - Women and Climate Change (Data Visualization)
 8. **agentic.html** - Agentic (Product Design)
 9. **lifetime-movie-club.html** - Lifetime Movie Club (Product Design)
 
