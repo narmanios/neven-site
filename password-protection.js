@@ -146,10 +146,10 @@
     if (input.value === CORRECT_PASSWORD) {
       // Store authentication with timestamp
       const authData = {
-        timestamp: Date.now()
+        timestamp: Date.now(),
       };
       localStorage.setItem(AUTH_KEY, JSON.stringify(authData));
-      
+
       overlay.remove();
       document.body.style.overflow = "";
     } else {
