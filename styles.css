@@ -203,10 +203,18 @@ a:hover {
   grid-column: span 1;
 }
 
-/* When only top projects are visible, use 2x2 grid */
+/* When only top projects are visible, use 4-column grid with large items spanning 2 cols */
 .portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.portfolio-item.top-featured:not(.recent-small) {
+  grid-column: span 2;
+}
+
+.portfolio-item.top-featured.recent-small {
+  grid-column: span 1;
 }
 
 .portfolio-item.top-featured .portfolio-title {
@@ -217,12 +225,24 @@ a:hover {
   font-size: 15px;
 }
 
+.portfolio-item.recent-small .portfolio-title {
+  font-size: 16px;
+}
+
+.portfolio-item.recent-small .portfolio-category {
+  font-size: 14px;
+}
+
 .portfolio-item.top-featured .portfolio-link {
   max-height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item.recent-small .portfolio-link {
+  max-height: 200px;
 }
 
 .portfolio-link {
@@ -365,6 +385,18 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
+  .portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-item.top-featured:not(.recent-small) {
+    grid-column: span 1;
+  }
+
+  .portfolio-item.recent-small {
+    grid-column: span 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -403,6 +435,16 @@ a:hover {
 
   .portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-item.top-featured:not(.recent-small),
+  .portfolio-item.recent-small {
+    grid-column: span 1;
+  }
+
+  .portfolio-item.top-featured .portfolio-link,
+  .portfolio-item.recent-small .portfolio-link {
+    max-height: none;
   }
 
   .main-content {
