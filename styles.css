@@ -107,7 +107,7 @@ a:hover {
 }
 
 .tagline {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   color: var(--text-color);
   margin-top: 12px;
@@ -284,10 +284,7 @@ a:hover {
     font-size: 24px;
   }
   .tagline {
-    font-size: 13px;
-  }
-  .tagline {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .main-nav ul {
