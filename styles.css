@@ -475,9 +475,36 @@ a:hover {
 }
 
 .project-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-top: 60px;
+  color: #666;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.project-section h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 2px;
+  background-color: #333;
+}
+
+.project-section .section-subheading {
   font-size: 32px;
-  font-weight: 400;
+  line-height: 1.6;
   margin-bottom: 24px;
+  margin-top: 0;
+  color: var(--text-color);
+  font-style: normal;
 }
 
 .project-section p {
@@ -612,6 +639,11 @@ a:hover {
   }
 
   .project-section h3 {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+
+  .project-section .section-subheading {
     font-size: 28px;
   }
 

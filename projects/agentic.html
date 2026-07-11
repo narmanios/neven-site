@@ -71,7 +71,9 @@
 
                 <!-- Project Overview -->
                 <section class="project-section">
-                    <p><strong>The Problem:</strong> The advertising stack had grown into a set of tools that each
+                    <h3>The Problem</h3>
+                    <p class="section-subheading">Fragmented tools that couldn't talk to each other</p>
+                    <p>The advertising stack had grown into a set of tools that each
                         worked well alone and not at all
                         together. Every module pulled from a different data source, with its own schema and its own
                         granularity. A media planner with a question had to already know which tool held the answer
@@ -84,21 +86,27 @@
                         <p class="project-image-caption">Fragmented tools and data sources</p>
                     </div>
 
-                    <p><strong>The Real Question:</strong> A chat box sitting on top of fragmented data just moves the
+                    <h3>The Real Question</h3>
+                    <p class="section-subheading">How does AI know which data answers which question?</p>
+                    <p>A chat box sitting on top of fragmented data just moves the
                         problem — the AI answers confidently
                         from whichever source it reaches first. The real question wasn't "how do we build a chat," it
                         was "how does the AI know which data answers which question?" That reframing set the constraint
                         for everything after: we needed a routing and synthesis layer underneath, not a UI wrapper, and
                         each module would need its own agent.</p>
 
-                    <p><strong>The Constraint:</strong> That created a tension I had to resolve. The version that solved
+                    <h3>The Constraint</h3>
+                    <p class="section-subheading">Build it right or ship it fast — I needed both</p>
+                    <p>That created a tension I had to resolve. The version that solved
                         the problem properly — every
                         tool surfaced through the AI, agents reasoning across all sources, clarifying questions
                         narrowing enormous datasets — was a multi-quarter build. The business needed something in users'
                         hands quickly. Designing only the end state would have produced a beautiful prototype nobody
                         could ship.</p>
 
-                    <p><strong>Two Targets:</strong> So I split the design into two deliberately different targets. For
+                    <h3>Two Targets</h3>
+                    <p class="section-subheading">A north star vision and a shippable MVP</p>
+                    <p>So I split the design into two deliberately different targets. For
                         the long-term vision, I
                         designed the full agentic system: every tool exposed through AI responses, clarifying questions
                         doing double duty — sharpening each answer while filtering the datasets running underneath. That
@@ -128,7 +136,9 @@
                         <p class="project-image-caption">AI assistant entry point</p>
                     </div> -->
 
-                    <p><strong>The MVP:</strong> For the short-term MVP, I traded breadth for one working path. Instead
+                    <h3>The MVP</h3>
+                    <p class="section-subheading">One working path instead of everything at once</p>
+                    <p>For the short-term MVP, I traded breadth for one working path. Instead
                         of every module wired to
                         its own agent, we shipped a single AI Research Assistant with a guided experience: users could
                         ask anything, or start from deterministic prompts we'd pulled from prior research — the
@@ -149,7 +159,9 @@
 
 
 
-                    <p><strong>Institutional Knowledge:</strong> To make the routing trustworthy, we documented
+                    <h3>Institutional Knowledge</h3>
+                    <p class="section-subheading">Turning tacit expertise into actionable intelligence</p>
+                    <p>To make the routing trustworthy, we documented
                         institutional knowledge as scripts — mapping the
                         input a planner would type to the output the AI should return — sourced directly from media
                         planners, analysts, and strategists, turning tacit expertise into something the system could act
@@ -170,7 +182,9 @@
                         </div>
                     </div>
 
-                    <p><strong>Trust &amp; Transparency:</strong> Routing solved <em>which</em> data answered a
+                    <h3>Trust & Transparency</h3>
+                    <p class="section-subheading">Every answer backed by sources you can verify</p>
+                    <p>Routing solved <em>which</em> data answered a
                         question. It
                         didn't solve whether anyone would trust the answer. In a tool people use to defend media
                         investment, a confident-sounding paragraph with no provenance is a liability, not a feature — so
@@ -187,7 +201,9 @@
                             panel</p>
                     </div>
 
-                    <p><strong>Two Distinct Jobs:</strong> I also split two jobs that a single chatbot usually
+                    <h3>Two Distinct Jobs</h3>
+                    <p class="section-subheading">Orientation and analysis, deliberately separated</p>
+                    <p>I also split two jobs that a single chatbot usually
                         blurs.
                         The Strategic Insights Guide answers "how do I use this platform and where does the data
                         live,"
@@ -209,7 +225,9 @@
                     </div>
 
 
-                    <p><strong>Outcome:</strong> We shipped the MVP in two months — fast for an agentic system built
+                    <h3>Outcome</h3>
+                    <p class="section-subheading">80% growth in active users, and insights that matter</p>
+                    <p>We shipped the MVP in two months — fast for an agentic system built
                         on
                         a new routing architecture. Since launch, active users have grown 80%, and planners,
                         researchers, and insight managers now reach for the AI Research Assistant in place of the
