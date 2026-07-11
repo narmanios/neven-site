@@ -35,8 +35,9 @@ a:hover {
 
 .container {
   max-width: 1400px;
+  width: 90%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
 }
 
 /* Header */
@@ -276,10 +277,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 24px;
-  }
-
   .header {
     padding: 40px 0 30px;
   }
@@ -310,10 +307,6 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 16px;
-  }
-
   .site-title {
     font-size: 28px;
   }
