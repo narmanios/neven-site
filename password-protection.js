@@ -6,11 +6,42 @@
     "persona-pathways.html",
   ];
   const CORRECT_PASSWORD = "watermellon";
+  const SESSION_DURATION = 20 * 60 * 1000; // 20 minutes in milliseconds
+  const AUTH_KEY = "portfolioAuth";
 
   // Check if current page needs protection
   const currentPage = window.location.pathname.split("/").pop();
   if (!PROTECTED_PAGES.includes(currentPage)) {
     return; // Not a protected page
+  }
+
+  // Check if user is already authenticated
+  function isAuthenticated() {
+    const authData = localStorage.getItem(AUTH_KEY);
+    if (!authData) return false;
+
+    try {
+      const { timestamp } = JSON.parse(authData);
+      const now = Date.now();
+      const elapsed = now - timestamp;
+
+      // Check if session is still valid
+      if (elapsed < SESSION_DURATION) {
+        return true;
+      } else {
+        // Session expired, clear it
+        localStorage.removeItem(AUTH_KEY);
+        return false;
+      }
+    } catch (e) {
+      localStorage.removeItem(AUTH_KEY);
+      return false;
+    }
+  }
+
+  // If already authenticated, no need to show password prompt
+  if (isAuthenticated()) {
+    return;
   }
 
   // Create password overlay
@@ -113,6 +144,12 @@
 
   function checkPassword() {
     if (input.value === CORRECT_PASSWORD) {
+      // Store authentication with timestamp
+      const authData = {
+        timestamp: Date.now()
+      };
+      localStorage.setItem(AUTH_KEY, JSON.stringify(authData));
+      
       overlay.remove();
       document.body.style.overflow = "";
     } else {
