@@ -84,6 +84,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const portfolioItemsForFilter = document.querySelectorAll(".portfolio-item");
 
+  // Initialize with top projects on page load
+  portfolioItemsForFilter.forEach((item) => {
+    const isTopProject = item.getAttribute("data-top") === "true";
+    if (isTopProject) {
+      item.classList.add("top-featured");
+    } else {
+      item.classList.add("hidden");
+    }
+  });
+
   filterButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const filterValue = this.getAttribute("data-filter");
@@ -95,13 +105,21 @@ document.addEventListener("DOMContentLoaded", function () {
       // Filter portfolio items
       portfolioItemsForFilter.forEach((item) => {
         const itemCategory = item.getAttribute("data-category");
+        const isTopProject = item.getAttribute("data-top") === "true";
 
-        if (filterValue === "all") {
-          item.classList.remove("hidden");
+        if (filterValue === "top-projects") {
+          if (isTopProject) {
+            item.classList.remove("hidden");
+            item.classList.add("top-featured");
+          } else {
+            item.classList.add("hidden");
+            item.classList.remove("top-featured");
+          }
         } else if (itemCategory === filterValue) {
-          item.classList.remove("hidden");
+          item.classList.remove("hidden", "top-featured");
         } else {
           item.classList.add("hidden");
+          item.classList.remove("top-featured");
         }
       });
     });

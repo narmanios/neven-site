@@ -199,6 +199,32 @@ a:hover {
   display: none;
 }
 
+.portfolio-item.top-featured {
+  grid-column: span 1;
+}
+
+/* When only top projects are visible, use 2x2 grid */
+.portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.portfolio-item.top-featured .portfolio-title {
+  font-size: 18px;
+}
+
+.portfolio-item.top-featured .portfolio-category {
+  font-size: 15px;
+}
+
+.portfolio-item.top-featured .portfolio-link {
+  max-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 .portfolio-link {
   display: block;
   overflow: hidden;
@@ -373,6 +399,10 @@ a:hover {
   .portfolio-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
+    grid-template-columns: 1fr;
   }
 
   .main-content {

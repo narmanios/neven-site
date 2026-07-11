@@ -46,7 +46,7 @@
         <div class="container">
             <!-- Filter Buttons -->
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">See All Projects</button>
+                <button class="filter-btn active" data-filter="top-projects">Top Projects</button>
                 <button class="filter-btn" data-filter="product-design">Product Design</button>
                 <button class="filter-btn" data-filter="data-visualization">Data Visualization</button>
             </div>
@@ -54,7 +54,7 @@
             <!-- Portfolio Grid -->
             <section class="portfolio-grid">
                 <!-- Product Design Projects -->
-                <div class="portfolio-item" data-category="product-design">
+                <div class="portfolio-item" data-category="product-design" data-top="true">
                     <a href="projects/agentic.html" class="portfolio-link">
                         <img src="images/agentic-thumbnail.jpg" alt="Agentic">
                     </a>
@@ -62,15 +62,7 @@
                     <p class="portfolio-title">Agentic Driven Design</p>
                 </div>
 
-                <div class="portfolio-item" data-category="product-design">
-                    <a href="projects/segment-opportunity-simulator.html" class="portfolio-link">
-                        <img src="images/sos-thumbnail.png" alt="Segment Opportunity Simulator">
-                    </a>
-                    <p class="portfolio-category">B2B Product Design</p>
-                    <p class="portfolio-title">Segment Opportunity Simulator</p>
-                </div>
-
-                <div class="portfolio-item" data-category="data-visualization">
+                <div class="portfolio-item" data-category="data-visualization" data-top="true">
                     <a href="projects/louis-armstrong.html" class="portfolio-link">
                         <img src="images/louis-armstrong-thumbnail.png" alt="Louis Armstrong Data Visualization">
                     </a>
@@ -78,7 +70,15 @@
                     <p class="portfolio-title">Louis Armstrong in Data and Song</p>
                 </div>
 
-                <div class="portfolio-item" data-category="data-visualization">
+                <div class="portfolio-item" data-category="product-design" data-top="true">
+                    <a href="projects/segment-opportunity-simulator.html" class="portfolio-link">
+                        <img src="images/sos-thumbnail.png" alt="Segment Opportunity Simulator">
+                    </a>
+                    <p class="portfolio-category">B2B Product Design</p>
+                    <p class="portfolio-title">Segment Opportunity Simulator</p>
+                </div>
+
+                <div class="portfolio-item" data-category="data-visualization" data-top="true">
                     <a href="projects/silhouette-art.html" class="portfolio-link">
                         <img src="images/silhouette-thumbnail.jpg" alt="Silhouette Art">
                     </a>
