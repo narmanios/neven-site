@@ -79,6 +79,33 @@ document.addEventListener("DOMContentLoaded", function () {
     item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
     itemObserver.observe(item);
   });
+
+  // Portfolio Filter Functionality
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const portfolioItemsForFilter = document.querySelectorAll(".portfolio-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const filterValue = this.getAttribute("data-filter");
+
+      // Update active button state
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      // Filter portfolio items
+      portfolioItemsForFilter.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category");
+
+        if (filterValue === "all") {
+          item.classList.remove("hidden");
+        } else if (itemCategory === filterValue) {
+          item.classList.remove("hidden");
+        } else {
+          item.classList.add("hidden");
+        }
+      });
+    });
+  });
 });
 
 // Handle external links

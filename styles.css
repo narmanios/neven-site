@@ -149,6 +149,38 @@ a:hover {
   padding: 60px 0 100px;
 }
 
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 400;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  color: var(--text-color);
+}
+
+.filter-btn:hover {
+  border-color: #333;
+  background: #f8f8f8;
+}
+
+.filter-btn.active {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
 /* Portfolio Grid */
 .portfolio-grid {
   display: grid;
@@ -161,6 +193,10 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.portfolio-item.hidden {
+  display: none;
 }
 
 .portfolio-link {
@@ -323,6 +359,15 @@ a:hover {
 
   .main-nav ul {
     gap: 20px;
+  }
+
+  .filter-buttons {
+    margin-bottom: 32px;
+  }
+
+  .filter-btn {
+    font-size: 15px;
+    padding: 8px 20px;
   }
 
   .portfolio-grid {
