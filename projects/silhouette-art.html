@@ -71,15 +71,26 @@
                 <!-- Overview Section -->
                 <section class="project-section">
                     <h3>Overview</h3>
-                    <p>Silhouette Art of Early America is a data visualization project inspired by the work of William
-                        Bache, an early nineteenth century artist who created thousands of silhouette portraits. These
-                        delicate cut paper profiles capture both likeness and mystery offering a unique glimpse into
-                        early American identity and artistry.</p>
+                    <p>An archive of 1,800 silhouettes is a hard thing to browse. Every object is a black profile on a
+                        white ground — no color, little metadata, and at thumbnail size, almost no differentiation. A
+                        grid of 1,800 of them is a wall, not a collection. And for many of the sitters, there isn't even
+                        a name: history recorded the outline of a person and nothing else.</p>
 
-                    <p>Traveling throughout the eastern seaboard of the United States and to the Caribbean and Cuba,
-                        Bache captured American society from politicians, everyday men, women, and children. Inexpensive
-                        to create these silhouettes were kept as mementos, placed inside a locket, added to a family
-                        album or just shared with family members.</p>
+                    <p>Silhouette Art of Early America is my attempt to make that archive explorable, and then to use AI
+                        to do something the original archive never could — give a face to the people it left unnamed.
+                    </p>
+
+                    <p>The silhouettes are the work of William Bache, an early nineteenth-century artist who cut
+                        thousands of paper profiles as he traveled the eastern seaboard, the Caribbean, and Cuba. He
+                        captured American society as he found it: politicians, soldiers, everyday men, women, and
+                        children. Cheap to make and quick to produce, the silhouettes were kept as mementos — slipped
+                        into a locket, pasted into a family album, handed to a relative. They capture likeness and
+                        mystery in the same stroke.</p>
+
+                    <p>Built with Smithsonian Open Access materials and a Hugging Face model backend, the project turns
+                        those 1,800 portraits into an interactive archive you can filter, compare, and trace — and lets
+                        a visitor step into it, rendering their own profile through the same idea Bache worked with two
+                        centuries ago: outline, shadow, identity.</p>
                 </section>
 
                 <!-- Embedded Project -->
@@ -88,51 +99,88 @@
                         allow="camera; microphone" allowfullscreen></iframe>
                 </div>
 
-                <!-- Project Details -->
+                <!-- The Design Problem Section -->
                 <section class="project-section">
-                    <h3>The Project</h3>
-                    <p>I use Hugging Face as an AI-powered backend to extend the interactive experience
-                        beyond static data visualization. The site presents William Bache's early nineteenth-century
-                        silhouette portraits as an explorable digital archive, transforming more than 1,800 silhouettes
-                        into interactive data that users can filter, compare, and trace. Alongside this historical
-                        dataset, Hugging Face supports the webcam-based AI interaction, allowing visitors to connect
-                        their own image or presence to the visual language of silhouette portraiture.</p>
+                    <h3>The Design Problem</h3>
+                    <p class="section-subheading">Browsing 1,800 near-identical objects</p>
+                    <p>An archive of silhouettes resists browsing. Every object is a black profile on a white ground,
+                        and a grid of them gives a visitor no reason to click one over another.</p>
 
-                    <p>By combining Smithsonian Open Access materials, computer vision, and AI tools, the project
-                        bridges historical portrait-making techniques with contemporary machine learning. Just as Bache
-                        used the physiognotrace to trace a sitter's profile, the AI component uses modern
-                        image-processing methods to reinterpret the user through the same idea of outline, shadow, and
-                        identity. Hugging Face makes this possible by hosting the AI/webcam component as a live
-                        model-backed experience, connecting the front-end website to an interactive AI system.</p>
+                    <p>So I let the data decide the structure. I worked through the archive's records to see which
+                        attributes were actually populated and reliable enough to filter on, and built the navigation
+                        from what the data could genuinely support rather than from categories I wished existed. That
+                        produced filters by sitter — men, women, and children — by role, surfacing the politicians and
+                        military figures among Bache's sitters, and by date range across his travels.</p>
+
+                    <p>The most important filter came from a gap rather than a value. The Smithsonian's own research
+                        recovered names for some of Bache's sitters; many others remain unidentified and always will. I
+                        made that division a filter of its own, so a visitor can move between the named and the nameless
+                        — and see how much of this archive is people history didn't keep.</p>
+
+                    <p>I also cut. Some attributes were genuinely distinct but appeared on only a handful of
+                        silhouettes, and a filter that returns three results isn't exploration, it's a dead end — so
+                        those didn't ship. And I initially combined several of these dimensions into fewer, broader
+                        controls, then pulled them back apart: the merged version was tidier, but it made the collection
+                        harder to move through, and exploration mattered more than economy.</p>
                 </section>
 
-                <!-- Visuals Section -->
+                <div class="project-image">
+                    <img src="../images/silhouette-gallery.jpg" alt="Gallery View">
+                    <p class="project-image-caption">Interactive gallery of silhouette portraits</p>
+                </div>
+
+                <div class="project-image">
+                    <img src="../images/silhouette-collection.jpg" alt="Collection Browser">
+                    <p class="project-image-caption">Browsing and filtering the collection</p>
+                </div>
+
+                <!-- The AI Interaction Section -->
                 <section class="project-section">
-                    <div class="project-image">
-                        <img src="../images/silhouette-gallery.jpg" alt="Gallery View">
-                        <p class="project-image-caption">Interactive gallery of silhouette portraits</p>
-                    </div>
+                    <h3>The AI Interaction</h3>
+                    <p class="section-subheading">Earning a webcam</p>
+                    <p>Asking a visitor to turn on their camera is the largest ask in the experience, and everything
+                        around it had to justify that. Before the prompt, I set expectations: guidance on how to
+                        position yourself for the best result — even though the model works without following it exactly
+                        — and an honest statement of how long the generation will take, so the wait is something a
+                        visitor agreed to rather than something that happens to them. During inference, a spinner holds
+                        the moment, so the pause reads as the system working rather than the system broken.</p>
 
-                    <div class="project-image">
-                        <img src="../images/silhouette-collection.jpg" alt="Collection Browser">
-                        <p class="project-image-caption">Browsing and filtering the collection</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="../images/silhouette-trace.jpg" alt="Trace Visualization">
-                        <p class="project-image-caption">Visualizing the physiognotrace tracing technique</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="../images/silhouette-ai-1.jpg" alt="AI Generated Faces">
-                        <p class="project-image-caption">Using AI to visualize unidentified sitters</p>
-                    </div>
-
-                    <div class="project-image">
-                        <img src="../images/silhouette-selfie.jpg" alt="Webcam Silhouette">
-                        <p class="project-image-caption">Creating your own silhouette with the webcam feature and AI</p>
-                    </div>
+                    <p>The exchange had to be worth it. A visitor gives their face, and in return they see themselves
+                        rendered in the same visual language Bache used two hundred years ago — the physiognotrace
+                        replaced by computer vision, but the same idea of outline, shadow, and identity.</p>
                 </section>
+
+                <div class="project-image">
+                    <img src="../images/silhouette-selfie.jpg" alt="Webcam Silhouette">
+                    <p class="project-image-caption">Creating your own silhouette with the webcam feature and AI</p>
+                </div>
+
+
+
+
+
+                <!-- The Line I Drew Section -->
+                <section class="project-section">
+                    <h3>The Line I Drew</h3>
+                    <p class="section-subheading">Giving a face only to the faceless</p>
+                    <p>The AI can generate a portrait for any sitter. I chose to generate them only for the ones history
+                        never identified.</p>
+
+                    <p>That rule mattered. Recreating a face for someone whose likeness or identity we actually have
+                        would be inventing over the record — replacing a real person with a plausible one. But for the
+                        sitters whose names were lost, there was never going to be a face at all. The generation gives
+                        an image to people who would otherwise have none, and it doesn't overwrite anyone who does.</p>
+                </section>
+
+                <div class="project-image">
+                    <img src="../images/silhouette-ai-1.jpg" alt="AI Generated Faces">
+                    <p class="project-image-caption">Using AI to visualize unidentified sitters</p>
+                </div>
+
+                <div class="project-image">
+                    <img src="../images/silhouette-trace.jpg" alt="Trace Visualization">
+                    <p class="project-image-caption">Visualizing the physiognotrace tracing technique</p>
+                </div>
 
                 <!-- Project Link -->
                 <div style="text-align: center; margin: 60px 0 40px;">
