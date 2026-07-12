@@ -14,7 +14,7 @@ Create or update these files for each portfolio item:
 2. **silhouette-art.html** - Silhouette Art (Data Visualization + AI)
 3. **louis-armstrong.html** - Louis Armstrong (Data Visualization)
 4. **persona-pathways.html** - Persona Pathways (Product Design)
-5. **history-vault.html** - HISTORY Vault (Product Design)
+5. **svod.html** - HISTORY Vault (Product Design)
 6. **machine-learning.html** - Machine Learning (AI/ML)
 7. **women-climate.html** - Women and Climate Change (Data Visualization)
 8. **agentic.html** - Agentic (Product Design)
