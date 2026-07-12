@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Silhouette Art of Early America - Data Visualization + AI by Neven Armanios">
+    <meta name="description"
+        content="Silhouette Art of Early America - Data Visualization + AI Product by Neven Armanios">
     <title>Silhouette Art of Early America | Neven Armanios</title>
     <link rel="preload" href="../images/profile-photo2.png" as="image">
     <link rel="stylesheet" href="../styles.css">
@@ -49,7 +50,7 @@
                 <div class="project-meta">
                     <div class="project-meta-item">
                         <span class="project-meta-label">Type</span>
-                        <span class="project-meta-value">Data Visualization · AI</span>
+                        <span class="project-meta-value">Data Visualization · AI Product</span>
                     </div>
                     <div class="project-meta-item">
                         <span class="project-meta-label">Link</span>
@@ -63,9 +64,20 @@
 
             <!-- Project Content -->
             <div class="project-content">
-                <!-- Hero Image -->
-                <div class="project-image">
-                    <img src="../images/silhouette-landing.jpg" alt="Silhouette Art Landing">
+                <!-- Hero Images Grid -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px;">
+                    <div class="project-image" style="margin: 0;">
+                        <img src="../images/silhouette-gallery.jpg" alt="Gallery View">
+                    </div>
+                    <div class="project-image" style="margin: 0;">
+                        <img src="../images/silhouette-collection.jpg" alt="Collection Browser">
+                    </div>
+                    <div class="project-image" style="margin: 0;">
+                        <img src="../images/silhouette-selfie.jpg" alt="Webcam Silhouette">
+                    </div>
+                    <div class="project-image" style="margin: 0;">
+                        <img src="../images/silhouette-ai-1.jpg" alt="AI Generated Faces">
+                    </div>
                 </div>
 
                 <!-- Overview Section -->
@@ -176,6 +188,27 @@
                     <img src="../images/silhouette-ai-1.jpg" alt="AI Generated Faces">
                     <p class="project-image-caption">Using AI to visualize unidentified sitters</p>
                 </div>
+
+                <!-- The Trace Section -->
+                <section class="project-section">
+                    <h3>The Trace</h3>
+                    <p class="section-subheading">The first interface: 1,800 outlines, redrawn</p>
+                    <p>Bache didn't draw freehand. He used a physiognotrace: a mechanical device that followed the
+                        contour of a sitter's face and reduced a person to a single continuous line. Fast, cheap,
+                        repeatable — it's why one man could produce thousands of portraits across a lifetime of travel,
+                        and why ordinary people could own a likeness when a painted portrait was unthinkable. It was, in
+                        every sense that matters, an interface.</p>
+
+                    <p>To make that mechanism legible, I extracted the outline of all 1,800 silhouettes and rebuilt them
+                        in D3 as animatable paths. Any silhouette in the archive can be re-traced on screen — the
+                        contour drawing itself back into existence, line following the same profile Bache's stylus once
+                        followed. What was a static image becomes the gesture that made it.</p>
+
+                    <p>And it's why the AI feature exists at all. The physiognotrace and the model do the same job, two
+                        hundred years apart: point a device at a person, reduce them to an outline, hand it back. Once
+                        you understand what Bache's machine was doing, the webcam isn't a novelty — it's the same idea
+                        running on different hardware.</p>
+                </section>
 
                 <div class="project-image">
                     <img src="../images/silhouette-trace.jpg" alt="Trace Visualization">
