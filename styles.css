@@ -421,11 +421,14 @@ a:hover {
 
   .filter-buttons {
     margin-bottom: 32px;
+    flex-wrap: nowrap;
+    gap: 8px;
   }
 
   .filter-btn {
-    font-size: 15px;
-    padding: 8px 20px;
+    font-size: 14px;
+    padding: 8px 16px;
+    white-space: nowrap;
   }
 
   .portfolio-grid {
