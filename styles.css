@@ -87,6 +87,7 @@ a:hover {
   height: 90px;
   object-fit: cover;
   margin-top: -5px;
+  transform: scaleX(-1);
 }
 
 .site-title {
