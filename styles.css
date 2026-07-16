@@ -544,6 +544,11 @@ a:hover {
     padding: 24px 24px 8px;
   }
 
+  /* Reduce header padding on project pages (no tagline) */
+  body:has(.project-page) .header {
+    padding: 12px 24px 8px;
+  }
+
   .header-content {
     flex-direction: column;
     gap: 20px;
