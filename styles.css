@@ -6,7 +6,7 @@
 }
 
 :root {
-  --primary-bg: rgb(245, 245, 240);
+  --primary-bg: rgb(238, 234, 220);
   --text-color: #000000;
   --text-secondary: #666666;
   --hover-color: #333333;
@@ -956,6 +956,7 @@ body:has(.project-page) .header-main {
   height: auto;
   display: block;
   border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-title {
@@ -1089,16 +1090,19 @@ body:has(.project-page) .header-main {
   height: auto;
   display: block;
   border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-image video {
   display: block;
   border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-image iframe {
   display: block;
   border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border: none;
 }
 
