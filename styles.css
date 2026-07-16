@@ -554,11 +554,20 @@ a:hover {
     gap: 20px;
   }
 
+  /* Reduce gaps on project pages to minimize empty space */
+  body:has(.project-page) .header-content {
+    gap: 12px;
+  }
+
   .header-main {
     flex-direction: column;
     gap: 20px;
     align-items: center;
     text-align: left;
+  }
+
+  body:has(.project-page) .header-main {
+    gap: 12px;
   }
 
   .photo-wrapper {
