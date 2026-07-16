@@ -620,7 +620,7 @@ a:hover {
 
   /* Featured items on mobile */
   .portfolio-item[data-featured="true"] {
-    padding: 24px 8px;
+    padding: 24px 0;
     margin-bottom: 32px;
   }
 
@@ -630,7 +630,7 @@ a:hover {
   }
 
   .portfolio-item[data-featured="true"] .portfolio-text {
-    padding: 0 8px;
+    padding: 0 16px;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-title {
@@ -936,12 +936,12 @@ a:hover {
 /* Project Detail Page Responsive - Mobile */
 @media (max-width: 768px) {
   .project-header {
-    padding: 24px 8px;
+    padding: 24px 0;
     text-align: left;
   }
 
   .project-header > :not(.project-image):not(.hero-grid) {
-    padding: 0 8px;
+    padding: 0 16px;
   }
 
   .project-meta {
