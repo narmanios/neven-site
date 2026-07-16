@@ -993,6 +993,13 @@ a:hover {
     text-align: left;
   }
 
+  /* Remove colored backgrounds on mobile */
+  .project-header.accent-gray,
+  .project-header.accent-pink,
+  .project-header.accent-blue {
+    background: none;
+  }
+
   .project-header > :not(.project-image):not(.hero-grid) {
     padding: 0 24px;
   }
