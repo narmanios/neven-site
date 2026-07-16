@@ -627,7 +627,7 @@ a:hover {
   /* ALL portfolio items on mobile - identical styling, no featured differences */
   .portfolio-item,
   .portfolio-item[data-featured="true"] {
-    padding: 0 !important;
+    padding: 0 16px !important;
     margin-bottom: 32px !important;
     max-width: none !important;
     background: none !important;
@@ -653,7 +653,7 @@ a:hover {
   .portfolio-item .portfolio-text,
   .portfolio-item[data-featured="true"] .portfolio-text,
   .portfolio-item > p {
-    padding: 0 12px !important;
+    padding: 0 !important;
     max-width: none !important;
     margin: 0 0 4px 0 !important;
     gap: 8px !important;
