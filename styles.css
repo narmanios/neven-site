@@ -288,7 +288,7 @@ a:hover {
   gap: 12px;
 }
 
-.portfolio-item.hidden {
+.hidden {
   display: none !important;
 }
 
