@@ -535,8 +535,12 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
   .header {
-    padding: 24px 0 16px;
+    padding: 24px 16px 16px;
   }
 
   .header-content {
@@ -591,6 +595,7 @@ a:hover {
     margin-bottom: 32px;
     flex-wrap: nowrap;
     gap: 8px;
+    padding: 0 16px;
   }
 
   .filter-btn {
@@ -620,19 +625,17 @@ a:hover {
 
   /* Featured items on mobile */
   .portfolio-item[data-featured="true"] {
-    padding: 0;
-    margin-bottom: 20px;
-    border-radius: 0;
+    padding: 24px 0;
+    margin-bottom: 32px;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-link {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     max-width: 100%;
-    border-radius: 0;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-text {
-    padding: 12px;
+    padding: 0 16px;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-title {
@@ -645,6 +648,11 @@ a:hover {
 
   .main-content {
     padding: 24px 0 60px;
+  }
+
+  .main-content:has(.filter-buttons) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -938,17 +946,12 @@ a:hover {
 /* Project Detail Page Responsive - Mobile */
 @media (max-width: 768px) {
   .project-header {
-    padding: 0;
+    padding: 24px 0;
     text-align: left;
-    border-radius: 0;
   }
 
   .project-header > :not(.project-image):not(.hero-grid) {
-    padding: 0 12px;
-  }
-
-  .project-header .project-image img {
-    border-radius: 0;
+    padding: 0 16px;
   }
 
   .project-meta {
