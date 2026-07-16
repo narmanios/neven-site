@@ -628,11 +628,13 @@ a:hover {
   .portfolio-item[data-featured="true"] {
     padding: 0;
     margin-bottom: 24px;
+    max-width: none;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-link {
     margin-bottom: 16px;
     width: 100%;
+    max-width: none;
     border-radius: 0;
     box-shadow: none;
   }
