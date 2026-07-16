@@ -550,26 +550,29 @@ a:hover {
   }
 
   .header-main {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
     text-align: left;
   }
 
   .photo-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
   }
 
   .header-text {
     align-items: flex-start;
     width: 100%;
+    gap: 4px;
   }
 
   .name-and-nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: baseline;
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   .header-nav ul {
@@ -577,19 +580,20 @@ a:hover {
   }
 
   .header-nav a {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .site-title {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .subtitle {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .tagline {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .filter-buttons {
