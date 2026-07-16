@@ -840,6 +840,10 @@ a:hover {
     margin: 0 0 16px;
   }
 
+  .subsection-title {
+    padding: 0 24px;
+  }
+
   .filter-btn {
     font-size: 14px;
     padding: 8px 16px;
