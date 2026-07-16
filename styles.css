@@ -544,19 +544,9 @@ a:hover {
     padding: 24px 24px 8px;
   }
 
-  /* Reduce header padding on project pages (no tagline) */
-  body:has(.project-page) .header {
-    padding: 12px 24px 8px;
-  }
-
   .header-content {
     flex-direction: column;
     gap: 20px;
-  }
-
-  /* Reduce gaps on project pages to minimize empty space */
-  body:has(.project-page) .header-content {
-    gap: 12px;
   }
 
   .header-main {
@@ -564,10 +554,6 @@ a:hover {
     gap: 20px;
     align-items: center;
     text-align: left;
-  }
-
-  body:has(.project-page) .header-main {
-    gap: 12px;
   }
 
   .photo-wrapper {
