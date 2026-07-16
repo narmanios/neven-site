@@ -698,6 +698,11 @@ a:hover {
     padding: 16px 0 60px;
   }
 
+  /* Reduce top padding on project pages */
+  body:has(.project-page) .main-content {
+    padding-top: 0;
+  }
+
   .main-content:has(.filter-buttons) {
     padding-left: 0;
     padding-right: 0;
@@ -998,7 +1003,7 @@ a:hover {
 /* Project Detail Page Responsive - Mobile */
 @media (max-width: 768px) {
   .project-header {
-    padding: 24px 0;
+    padding: 12px 0;
     text-align: left;
   }
 
