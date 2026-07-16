@@ -631,11 +631,18 @@ a:hover {
 
   .portfolio-item[data-featured="true"] .portfolio-link {
     margin-bottom: 16px;
-    max-width: 100%;
+    max-width: none;
     border-radius: 0;
     box-shadow: none;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
+    position: relative;
+  }
+
+  .portfolio-item[data-featured="true"] .portfolio-link img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-text {
