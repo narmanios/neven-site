@@ -540,7 +540,7 @@ a:hover {
   }
 
   .header {
-    padding: 24px 16px 16px;
+    padding: 24px 24px 16px;
   }
 
   .header-content {
@@ -595,7 +595,7 @@ a:hover {
     margin-bottom: 32px;
     flex-wrap: nowrap;
     gap: 8px;
-    padding: 0 16px;
+    padding: 0 24px;
   }
 
   .filter-btn {
@@ -635,7 +635,7 @@ a:hover {
   }
 
   .portfolio-item[data-featured="true"] .portfolio-text {
-    padding: 0 16px;
+    padding: 0 24px;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-title {
@@ -653,6 +653,14 @@ a:hover {
   .main-content:has(.filter-buttons) {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .footer {
+    padding: 40px 24px;
+  }
+
+  .portfolio-item:not([data-featured="true"]) {
+    padding: 0 24px;
   }
 }
 
@@ -951,7 +959,7 @@ a:hover {
   }
 
   .project-header > :not(.project-image):not(.hero-grid) {
-    padding: 0 16px;
+    padding: 0 24px;
   }
 
   .project-meta {
@@ -992,7 +1000,7 @@ a:hover {
   }
 
   .project-page {
-    padding: 110px 0 80px;
+    padding: 110px 24px 80px;
   }
 
   .project-navigation {
