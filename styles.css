@@ -663,7 +663,7 @@ a:hover {
   }
 
   .header {
-    padding: 40px 24px 24px;
+    padding: 40px 24px 16px;
   }
 
   .header-content {
@@ -842,7 +842,7 @@ a:hover {
   }
 
   .main-content {
-    padding: 16px 0 60px;
+    padding: 8px 0 60px;
   }
 
   /* Reduce top padding on project pages */
