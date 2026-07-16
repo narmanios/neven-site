@@ -624,7 +624,7 @@ a:hover {
     max-height: none;
   }
 
-  /* All portfolio items on mobile - full width styling */
+  /* All portfolio items on mobile - completely uniform styling */
   .portfolio-item {
     padding: 0;
     margin-bottom: 32px;
@@ -650,23 +650,45 @@ a:hover {
   .portfolio-item .portfolio-text,
   .portfolio-item > p {
     padding: 0 12px;
+    max-width: none;
+    margin: 0;
+  }
+
+  /* Override all featured item special styling on mobile */
+  .portfolio-item[data-featured="true"] {
+    padding: 0;
+    margin-bottom: 32px;
+    background: none !important;
+  }
+
+  .portfolio-item[data-featured="true"] .portfolio-link {
+    margin-bottom: 16px;
+  }
+
+  .portfolio-item[data-featured="true"] .portfolio-text {
+    padding: 0 12px;
+    max-width: none;
+    gap: 8px;
   }
 
   .portfolio-item .portfolio-title,
   .portfolio-item[data-featured="true"] .portfolio-title {
     font-size: 16px;
     font-weight: 400;
+    margin: 0 0 4px 0;
   }
 
   .portfolio-item .portfolio-category,
   .portfolio-item[data-featured="true"] .portfolio-category {
     font-size: 14px;
+    margin: 0 0 4px 0;
   }
 
   .portfolio-item .portfolio-description,
   .portfolio-item[data-featured="true"] .portfolio-description {
     font-size: 16px;
     line-height: 1.6;
+    margin: 0;
   }
 
   .main-content {
