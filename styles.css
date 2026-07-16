@@ -540,7 +540,7 @@ a:hover {
   }
 
   .header {
-    padding: 24px 24px 16px;
+    padding: 24px 24px 8px;
   }
 
   .header-content {
@@ -625,8 +625,8 @@ a:hover {
 
   /* Featured items on mobile */
   .portfolio-item[data-featured="true"] {
-    padding: 24px 0;
-    margin-bottom: 32px;
+    padding: 0;
+    margin-bottom: 24px;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-link {
@@ -635,7 +635,7 @@ a:hover {
   }
 
   .portfolio-item[data-featured="true"] .portfolio-text {
-    padding: 0 24px;
+    padding: 0 24px 16px;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-title {
@@ -647,7 +647,7 @@ a:hover {
   }
 
   .main-content {
-    padding: 24px 0 60px;
+    padding: 16px 0 60px;
   }
 
   .main-content:has(.filter-buttons) {
