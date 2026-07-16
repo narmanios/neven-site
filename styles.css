@@ -833,6 +833,10 @@ a:hover {
     color: #666 !important;
   }
 
+  .portfolio-item[data-featured="true"] .portfolio-category::before {
+    width: 20px !important;
+  }
+
   .portfolio-item .portfolio-description,
   .portfolio-item[data-featured="true"] .portfolio-description {
     font-size: 17px !important;
