@@ -434,7 +434,7 @@ a:hover {
 }
 
 .portfolio-item.top-featured:not(.recent-small):not([data-featured="true"]) {
-  grid-column: span 2;
+  grid-column: span 1;
 }
 
 .portfolio-item.top-featured.recent-small {
