@@ -663,7 +663,7 @@ a:hover {
   }
 
   .header {
-    padding: 40px 24px 16px;
+    padding: 40px 24px 8px;
   }
 
   .header-content {
@@ -750,7 +750,7 @@ a:hover {
 
   .section-title {
     font-size: 20px;
-    margin: 0 0 20px;
+    margin: 0 0 16px;
   }
 
   .filter-btn {
@@ -842,7 +842,7 @@ a:hover {
   }
 
   .main-content {
-    padding: 8px 0 60px;
+    padding: 0 0 60px;
   }
 
   /* Reduce top padding on project pages */
