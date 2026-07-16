@@ -642,7 +642,7 @@ a:hover {
   .portfolio-item,
   .portfolio-item[data-featured="true"] {
     padding: 0 24px !important;
-    margin-bottom: 32px !important;
+    margin-bottom: 56px !important;
     max-width: none !important;
     background: none !important;
     border-radius: 0 !important;
