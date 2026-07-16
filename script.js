@@ -84,15 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const portfolioItemsForFilter = document.querySelectorAll(".portfolio-item");
 
-  // Initialize with most recent projects on page load
+  // Initialize with product design projects on page load
   portfolioItemsForFilter.forEach((item) => {
-    const isTopProject = item.getAttribute("data-top") === "true";
-    const isRecentSmall = item.getAttribute("data-recent-small") === "true";
-    if (isTopProject) {
-      item.classList.add("top-featured");
-      if (isRecentSmall) {
-        item.classList.add("recent-small");
-      }
+    const itemCategory = item.getAttribute("data-category");
+    if (itemCategory === "product-design") {
+      item.classList.remove("hidden");
     } else {
       item.classList.add("hidden");
     }
@@ -109,25 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // Filter portfolio items
       portfolioItemsForFilter.forEach((item) => {
         const itemCategory = item.getAttribute("data-category");
-        const isTopProject = item.getAttribute("data-top") === "true";
-        const isRecentSmall = item.getAttribute("data-recent-small") === "true";
 
-        if (filterValue === "most-recent") {
-          if (isTopProject) {
-            item.classList.remove("hidden");
-            item.classList.add("top-featured");
-            if (isRecentSmall) {
-              item.classList.add("recent-small");
-            }
-          } else {
-            item.classList.add("hidden");
-            item.classList.remove("top-featured", "recent-small");
-          }
-        } else if (itemCategory === filterValue) {
-          item.classList.remove("hidden", "top-featured", "recent-small");
+        if (itemCategory === filterValue) {
+          item.classList.remove("hidden");
         } else {
           item.classList.add("hidden");
-          item.classList.remove("top-featured", "recent-small");
         }
       });
     });

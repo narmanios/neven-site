@@ -25,27 +25,22 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="branding">
-                    <div class="name-with-photo">
-                        <a href="../index.html">
-                            <div class="photo-wrapper">
-                                <img src="../images/profile-photo2.png" alt="Neven Armanios"
-                                    class="profile-photo-header">
-                            </div>
-                        </a>
-                        <h1 class="site-title"><a href="../index.html">Neven Armanios</a></h1>
+                <div class="header-main">
+                    <a href="../index.html" class="photo-wrapper">
+                        <img src="../images/profile-photo2.png" alt="Neven Armanios" class="profile-photo-header">
+                    </a>
+                    <div class="header-text">
+                        <div class="name-and-nav">
+                            <h1 class="site-title"><a href="../index.html">Neven Armanios</a></h1>
+                            <nav class="header-nav">
+                                <ul>
+                                    <li><a href="../index.html">Portfolio</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <h2 class="subtitle"><a href="../index.html">Product Designer</a></h2>
                     </div>
-                    <nav class="main-nav">
-                        <ul>
-                            <li>
-                                <button class="work-toggle" id="workToggle">Work</button>
-                            </li>
-                            <li><a href="../about.html">About</a></li>
-                            <li><a href="../index.html">Portfolio</a></li>
-                        </ul>
-                    </nav>
                 </div>
-                <h2 class="subtitle"><a href="../index.html">Product & Data Visualization Designer</a></h2>
             </div>
         </div>
     </header>
@@ -54,7 +49,7 @@
     <main class="main-content project-page">
         <div class="container">
             <!-- Project Header -->
-            <div class="project-header">
+            <div class="project-header accent-gray">
                 <h1 class="project-title">Silhouette Art of Early America</h1>
                 <div class="project-meta">
                     <div class="project-meta-item">
@@ -69,12 +64,9 @@
                 </div>
                 <p style="font-size: 14px; color: #666; margin-top: 8px;">
                     Designer & Developer · Timeframe: 2 months · Team: Solo project</p>
-            </div>
-
-            <!-- Project Content -->
-            <div class="project-content">
                 <!-- Hero Images Grid -->
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px;">
+                <div class="hero-grid"
+                    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px;">
                     <div class="project-image" style="margin: 0;">
                         <img src="../images/silhouette-gallery.jpg" alt="Gallery View">
                     </div>
@@ -88,6 +80,10 @@
                         <img src="../images/silhouette-ai-1.jpg" alt="AI Generated Faces">
                     </div>
                 </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-content">
 
                 <!-- Overview Section -->
                 <section class="project-section">
@@ -147,12 +143,14 @@
                     <p>So I let the data decide the structure. I worked through the archive's records to see which
                         attributes were actually populated and reliable enough to filter on, and built the navigation
                         from what the data could genuinely support rather than from categories I wished existed. That
-                        produced filters by sitter, gents (men), women, and children, or by role, surfacing the politicians and
+                        produced filters by sitter, gents (men), women, and children, or by role, surfacing the
+                        politicians and
                         military figures among Bache's sitters, and by date range across his travels.</p>
 
                     <p>The most important filter came from a gap rather than a value. The Smithsonian's own research
                         recovered names for some of Bache's sitters; many others remain unidentified and always will. I
-                        made that division a filter of its own, so a visitor can move between the named and the nameless.</p>
+                        made that division a filter of its own, so a visitor can move between the named and the
+                        nameless.</p>
 
                     <p>I also cut. Some attributes were genuinely distinct but appeared on only a handful of
                         silhouettes, and a filter that returns three results isn't exploration, it's a dead end so
@@ -176,7 +174,8 @@
                     <p class="section-subheading">Earning a webcam</p>
                     <p>Asking a visitor to turn on their camera is the largest ask in the experience, and everything
                         around it had to justify that. Before the prompt, I set expectations: guidance on how to
-                        position yourself for the best result even though the model works without following it exactly and an honest statement of how long the generation will take, so the wait is something a
+                        position yourself for the best result even though the model works without following it exactly
+                        and an honest statement of how long the generation will take, so the wait is something a
                         visitor agreed to rather than something that happens to them.</p>
 
                     <p>The exchange had to be worth it. A visitor gives their face, and in return they see themselves
@@ -241,7 +240,7 @@
                 <section class="project-section">
                     <h3>What the Archive Revealed</h3>
                     <p class="section-subheading">The nameless as a population</p>
-                    <p>Of Bache's 1,800+ sitters, over 1,100 are still unnamed.  People whose likeness survived two
+                    <p>Of Bache's 1,800+ sitters, over 1,100 are still unnamed. People whose likeness survived two
                         hundred
                         years while their identity did not. The Smithsonian's research recovered some; the rest are lost
                         for good. Building a filter for that gap made it visible in a way a catalogue never could: you

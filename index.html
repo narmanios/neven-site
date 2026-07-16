@@ -13,7 +13,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio | Neven Armanios - Product & Data Visualization Designer">
+    <meta name="description" content="Portfolio | Neven Armanios - Product Designer">
     <title>Portfolio | Neven Armanios</title>
     <link rel="preload" href="images/profile-photo2.png" as="image">
     <link rel="stylesheet" href="styles.css">
@@ -24,28 +24,25 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="branding">
-                    <div class="name-with-photo">
-                        <a href="index.html">
-                            <div class="photo-wrapper">
-                                <img src="images/profile-photo2.png" alt="Neven Armanios" class="profile-photo-header">
-                            </div>
-                        </a>
-                        <h1 class="site-title"><a href="index.html">Neven Armanios</a></h1>
+                <div class="header-main">
+                    <a href="index.html" class="photo-wrapper">
+                        <img src="images/profile-photo2.png" alt="Neven Armanios" class="profile-photo-header">
+                    </a>
+                    <div class="header-text">
+                        <div class="name-and-nav">
+                            <h1 class="site-title"><a href="index.html">Neven Armanios</a></h1>
+                            <nav class="header-nav">
+                                <ul>
+                                    <li><a href="index.html">Portfolio</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <h2 class="subtitle"><a href="index.html">Product Designer</a></h2>
+                        <p class="tagline">Hi, I'm Neven. I'm a Senior Product Designer, and I spend most of my time on
+                            the messy stuff — complex data, AI-assisted workflows, and research tools. Basically, I like
+                            taking things that are hard to make sense of and making them make sense.</p>
                     </div>
-                    <nav class="main-nav">
-                        <ul>
-                            <li>
-                                <button class="work-toggle" id="workToggle">Work</button>
-                            </li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="index.html">Portfolio</a></li>
-                        </ul>
-                    </nav>
                 </div>
-                <h2 class="subtitle"><a href="index.html">Product & Data Visualization Designer</a></h2>
-                <p class="tagline">I design products that make complex information easier to understand, navigate, and
-                    act on.</p>
             </div>
         </div>
     </header>
@@ -55,72 +52,101 @@
         <div class="container">
             <!-- Filter Buttons -->
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="most-recent">Recent</button>
-                <button class="filter-btn" data-filter="product-design">Product Design</button>
+                <button class="filter-btn active" data-filter="product-design">Product Design</button>
                 <button class="filter-btn" data-filter="data-visualization">Data Visualization</button>
             </div>
 
             <!-- Portfolio Grid -->
             <section class="portfolio-grid">
-                <!-- Product Design Projects -->
-                <div class="portfolio-item" data-category="product-design" data-top="true">
-                    <a href="projects/agentic.html" class="portfolio-link">
-                        <img src="images/agentic-thumbnail.jpg" alt="Agentic">
-                    </a>
-                    <p class="portfolio-category">B2B Product Design (Agentic)</p>
-                    <p class="portfolio-title">Agentic Driven Design</p>
-                </div>
+                <!-- Featured Case Studies -->
+                <a href="projects/segment-opportunity-simulator.html" class="portfolio-item"
+                    data-category="product-design" data-top="true" data-featured="true">
+                    <img src="images/sos-thumbnail.jpg" alt="Segment Opportunity Simulator" class="portfolio-link">
+                    <div class="portfolio-text">
+                        <p class="portfolio-category">B2B Product Design</p>
+                        <p class="portfolio-title">Segment Opportunity Simulator</p>
+                        <p class="portfolio-description">A strategic tool designed to help teams visualize market
+                            opportunities and make data-driven decisions. This platform transforms complex business
+                            intelligence into actionable insights through intuitive interfaces and real-time scenario
+                            modeling.</p>
+                    </div>
+                </a>
 
-                <div class="portfolio-item" data-category="data-visualization" data-top="true">
-                    <a href="projects/louis-armstrong.html" class="portfolio-link">
-                        <img src="images/louis-armstrong-thumbnail.png" alt="Louis Armstrong Data Visualization">
-                    </a>
-                    <p class="portfolio-category">Data Visualization · Parsons MS Thesis</p>
-                    <p class="portfolio-title">Louis Armstrong in Data and Song</p>
-                </div>
+                <a href="projects/agentic.html" class="portfolio-item" data-category="product-design" data-top="true"
+                    data-featured="true">
+                    <img src="images/agentic-thumbnail.jpg" alt="Agentic" class="portfolio-link">
+                    <div class="portfolio-text">
+                        <p class="portfolio-category">B2B Product Design (Agentic)</p>
+                        <p class="portfolio-title">AI Research Assistant</p>
+                        <p class="portfolio-description">An innovative approach to autonomous systems that empowers
+                            users to collaborate with AI agents. This design framework balances automation with human
+                            oversight, creating seamless workflows that adapt to user needs and business objectives.</p>
+                    </div>
+                </a>
 
-                <div class="portfolio-item" data-category="product-design" data-top="true" data-recent-small="true">
-                    <a href="projects/segment-opportunity-simulator.html" class="portfolio-link">
-                        <img src="images/sos-thumbnail.png" alt="Segment Opportunity Simulator">
-                    </a>
-                    <p class="portfolio-category">B2B Product Design</p>
-                    <p class="portfolio-title">Segment Opportunity Simulator</p>
-                </div>
+                <a href="projects/louis-armstrong.html" class="portfolio-item" data-category="data-visualization"
+                    data-featured="true">
+                    <img src="images/louis-armstrong-thumbnail.png" alt="Louis Armstrong Data Visualization"
+                        class="portfolio-link">
+                    <div class="portfolio-text">
+                        <p class="portfolio-category">Data Visualization · Parsons MS Thesis</p>
+                        <p class="portfolio-title">Louis Armstrong in Data and Song</p>
+                        <p class="portfolio-description">An interactive exploration of Louis Armstrong's musical legacy
+                            through data visualization. This thesis project combines archival research with modern
+                            design to reveal patterns in his performances and recordings across decades.</p>
+                    </div>
+                </a>
 
-                <div class="portfolio-item" data-category="data-visualization">
-                    <a href="projects/machine-learning.html" class="portfolio-link">
-                        <img src="images/machine-learning-thumbnail.jpg" alt="Machine Learning">
-                    </a>
-                    <p class="portfolio-category">AI/ML</p>
-                    <p class="portfolio-title">Machine Learning</p>
-                </div>
+                <a href="projects/machine-learning.html" class="portfolio-item" data-category="data-visualization"
+                    data-featured="true">
+                    <img src="images/machine-learning-thumbnail.jpg" alt="Machine Learning" class="portfolio-link">
+                    <div class="portfolio-text">
+                        <p class="portfolio-category">AI/ML</p>
+                        <p class="portfolio-title">Machine Learning</p>
+                        <p class="portfolio-description">A collection of machine learning experiments and visualizations
+                            that make complex AI concepts accessible. This project explores neural networks, pattern
+                            recognition, and predictive models through intuitive visual interfaces.</p>
+                    </div>
+                </a>
 
-                <div class="portfolio-item" data-category="data-visualization" data-top="true" data-recent-small="true">
-                    <a href="projects/silhouette-art.html" class="portfolio-link">
-                        <img src="images/silhouette-thumbnail.jpg" alt="Silhouette Art">
-                    </a>
-                    <p class="portfolio-category">Data Visualization · AI Product</p>
-                    <p class="portfolio-title">Silhouette Art of Early America</p>
-                </div>
+                <a href="projects/silhouette-art.html" class="portfolio-item" data-category="data-visualization"
+                    data-featured="true">
+                    <img src="images/silhouette-thumbnail.jpg" alt="Silhouette Art" class="portfolio-link">
+                    <div class="portfolio-text">
+                        <p class="portfolio-category">Data Visualization · AI Product</p>
+                        <p class="portfolio-title">Silhouette Art of Early America</p>
+                        <p class="portfolio-description">An AI-powered archive that brings 18th and 19th century
+                            silhouette portraits into the digital age. This project combines computer vision with
+                            historical research to create an interactive database of over 1,100 artworks.</p>
+                    </div>
+                </a>
 
-                <div class="portfolio-item" data-category="product-design" data-top="true" data-recent-small="true">
-                    <a href="projects/svod.html" class="portfolio-link">
-                        <img src="images/history-vault-thumbnail.gif" alt="HISTORY Vault">
-                    </a>
-                    <p class="portfolio-category">B2C Product Design</p>
-                    <p class="portfolio-title">HISTORY Vault</p>
-                </div>
+                <a href="projects/svod.html" class="portfolio-item" data-category="product-design" data-featured="true">
+                    <img src="images/history-vault-thumbnail.gif" alt="HISTORY Vault" class="portfolio-link">
+                    <div class="portfolio-text">
+                        <p class="portfolio-category">B2C Product Design</p>
+                        <p class="portfolio-title">HISTORY Vault</p>
+                        <p class="portfolio-description">A premium streaming service offering thousands of
+                            commercial-free documentaries and historical content. The platform delivers an immersive
+                            viewing experience optimized for history enthusiasts across web, mobile, and connected TV
+                            devices.</p>
+                    </div>
+                </a>
 
                 <!-- Data Visualization & AI/ML Projects -->
-                <div class="portfolio-item" data-category="product-design">
-                    <a href="projects/lifetime-movie-club.html" class="portfolio-link">
-                        <img src="images/lmc-ios-5.png" alt="Lifetime Movie Club">
-                    </a>
-                    <p class="portfolio-category">B2C Product Design</p>
-                    <p class="portfolio-title">Lifetime Movie Club</p>
-                </div>
+                <a href="projects/lifetime-movie-club.html" class="portfolio-item" data-category="product-design"
+                    data-featured="true">
+                    <img src="images/lmc-ios-5.png" alt="Lifetime Movie Club" class="portfolio-link">
+                    <div class="portfolio-text">
+                        <p class="portfolio-category">B2C Product Design</p>
+                        <p class="portfolio-title">Lifetime Movie Club</p>
+                        <p class="portfolio-description">A subscription streaming platform dedicated to Lifetime's
+                            extensive movie library. This mobile-first design provides seamless access to hundreds of
+                            films with personalized recommendations and curated collections for devoted fans.</p>
+                    </div>
+                </a>
 
-                <div class="portfolio-item" data-category="data-visualization" data-top="true" data-recent-small="true">
+                <div class="portfolio-item" data-category="data-visualization">
                     <a href="https://narmanios.github.io/banned-words/" class="portfolio-link external-link"
                         target="_blank" data-confirm="true">
                         <img src="images/banned-words.png" alt="Banned Words">
