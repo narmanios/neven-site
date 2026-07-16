@@ -6,7 +6,7 @@
 }
 
 :root {
-  --primary-bg: #ffffff;
+  --primary-bg: rgb(245, 245, 240);
   --text-color: #000000;
   --text-secondary: #666666;
   --hover-color: #333333;
@@ -217,7 +217,7 @@ a:hover {
 }
 
 .main-content:has(.filter-buttons) {
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 /* Section Title */
