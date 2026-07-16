@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Portfolio Filter Functionality
   const filterButtons = document.querySelectorAll(".filter-btn");
   const portfolioItemsForFilter = document.querySelectorAll(".portfolio-item");
+  const subsectionTitles = document.querySelectorAll(".subsection-title");
 
   // Initialize with product design projects on page load
   portfolioItemsForFilter.forEach((item) => {
@@ -91,6 +92,14 @@ document.addEventListener("DOMContentLoaded", function () {
       item.classList.remove("hidden");
     } else {
       item.classList.add("hidden");
+    }
+  });
+
+  // Hide subsection titles that don't match product-design on initial load
+  subsectionTitles.forEach((title) => {
+    const titleCategory = title.getAttribute("data-category");
+    if (titleCategory && titleCategory !== "product-design") {
+      title.classList.add("hidden");
     }
   });
 
@@ -110,6 +119,17 @@ document.addEventListener("DOMContentLoaded", function () {
           item.classList.remove("hidden");
         } else {
           item.classList.add("hidden");
+        }
+      });
+
+      // Filter subsection titles
+      subsectionTitles.forEach((title) => {
+        const titleCategory = title.getAttribute("data-category");
+
+        if (titleCategory === filterValue) {
+          title.classList.remove("hidden");
+        } else if (titleCategory) {
+          title.classList.add("hidden");
         }
       });
     });
