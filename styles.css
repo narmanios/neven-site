@@ -632,6 +632,10 @@ a:hover {
   .portfolio-item[data-featured="true"] .portfolio-link {
     margin-bottom: 16px;
     max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
   }
 
   .portfolio-item[data-featured="true"] .portfolio-text {
