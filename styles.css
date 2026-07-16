@@ -265,7 +265,7 @@ a:hover {
 /* Portfolio Grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin-bottom: 80px;
 }
@@ -429,7 +429,7 @@ a:hover {
 
 /* When only top projects are visible, use 4-column grid with large items spanning 2 cols */
 .portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
 
