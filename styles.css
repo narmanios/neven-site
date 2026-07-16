@@ -629,6 +629,8 @@ a:hover {
     padding: 0;
     margin-bottom: 24px;
     max-width: none;
+    background: none !important;
+    border-radius: 0;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-link {
