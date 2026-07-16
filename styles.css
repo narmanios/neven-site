@@ -1067,43 +1067,42 @@ body:has(.project-page) .header-main {
 }
 
 .project-category {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0 0 8px 0;
   color: #666;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #666;
+  border-radius: 6px;
+  line-height: 1.5;
 }
 
 .project-category::before {
-  content: "";
-  width: 40px;
-  height: 0;
-  border-top: 2px solid #666;
+  display: none;
 }
 
-/* Color-coded solid lines for project categories - five colors */
-.project-header.accent-red .project-category::before {
-  border-top-color: #90cfff;
+/* Color-coded backgrounds for project categories - five colors */
+.project-header.accent-red .project-category {
+  background-color: #90cfff;
 }
 
-.project-header.accent-blue .project-category::before {
-  border-top-color: #c9b0ff;
+.project-header.accent-blue .project-category {
+  background-color: #c9b0ff;
 }
 
-.project-header.accent-green .project-category::before {
-  border-top-color: #ffcc99;
+.project-header.accent-green .project-category {
+  background-color: #ffcc99;
 }
 
-.project-header.accent-magenta .project-category::before {
-  border-top-color: #ffb8d4;
+.project-header.accent-magenta .project-category {
+  background-color: #ffb8d4;
 }
 
-.project-header.accent-purple .project-category::before {
-  border-top-color: #dec0ff;
+.project-header.accent-purple .project-category {
+  background-color: #dec0ff;
 }
 
 .project-title {
@@ -1150,7 +1149,7 @@ body:has(.project-page) .header-main {
 }
 
 .project-section h3 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 12px;
   margin-top: 60px;
@@ -1159,38 +1158,36 @@ body:has(.project-page) .header-main {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   position: relative;
-  padding-left: 0;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  padding: 12px 24px;
+  background-color: #666;
+  border-radius: 6px;
+  display: inline-block;
+  line-height: 1.5;
 }
 
 .project-section h3::before {
-  content: "";
-  width: 40px;
-  height: 0;
-  border-top: 2px solid #666;
+  display: none;
 }
 
-/* Color-coded lines for h3 headings - five colors */
-.project-header.accent-red ~ .project-content .project-section h3::before {
-  border-top-color: #90cfff;
+/* Color-coded backgrounds for h3 headings - five colors */
+.project-header.accent-red ~ .project-content .project-section h3 {
+  background-color: #90cfff;
 }
 
-.project-header.accent-blue ~ .project-content .project-section h3::before {
-  border-top-color: #c9b0ff;
+.project-header.accent-blue ~ .project-content .project-section h3 {
+  background-color: #c9b0ff;
 }
 
-.project-header.accent-green ~ .project-content .project-section h3::before {
-  border-top-color: #ffcc99;
+.project-header.accent-green ~ .project-content .project-section h3 {
+  background-color: #ffcc99;
 }
 
-.project-header.accent-magenta ~ .project-content .project-section h3::before {
-  border-top-color: #ffb8d4;
+.project-header.accent-magenta ~ .project-content .project-section h3 {
+  background-color: #ffb8d4;
 }
 
-.project-header.accent-purple ~ .project-content .project-section h3::before {
-  border-top-color: #dec0ff;
+.project-header.accent-purple ~ .project-content .project-section h3 {
+  background-color: #dec0ff;
 }
 
 .project-section .section-subheading {
@@ -1367,12 +1364,20 @@ body:has(.project-page) .header-main {
   }
 
   .project-category {
-    justify-content: flex-start;
-    font-size: 13px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #666;
+    display: inline-block;
+    background-color: #666;
+    border-radius: 6px;
   }
 
   .project-category::before {
-    width: 20px !important;
+    display: none;
   }
 
   .project-title {
@@ -1386,7 +1391,16 @@ body:has(.project-page) .header-main {
 
   .project-section h3 {
     font-size: 16px;
+    font-weight: 600;
     margin-top: 40px;
+    padding: 12px 24px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #666;
+    display: inline-block;
+    background-color: #666;
+    border-radius: 6px;
   }
 
   .project-section .section-subheading {
