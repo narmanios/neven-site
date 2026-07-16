@@ -607,7 +607,7 @@ a:hover {
 
   .portfolio-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 0;
   }
 
   .portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
@@ -624,16 +624,14 @@ a:hover {
     max-height: none;
   }
 
-  /* Featured items on mobile */
-  .portfolio-item[data-featured="true"] {
+  /* All portfolio items on mobile styled like project pages */
+  .portfolio-item {
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     max-width: none;
-    background: none !important;
-    border-radius: 0;
   }
 
-  .portfolio-item[data-featured="true"] .portfolio-link {
+  .portfolio-item .portfolio-link {
     margin-bottom: 16px;
     width: 100%;
     max-width: none;
@@ -641,10 +639,34 @@ a:hover {
     box-shadow: none;
   }
 
-  .portfolio-item[data-featured="true"] .portfolio-link img {
+  .portfolio-item .portfolio-link img {
     width: 100%;
     height: auto;
     display: block;
+  }
+
+  .portfolio-item .portfolio-text {
+    padding: 0 12px;
+  }
+
+  .portfolio-item .portfolio-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  .portfolio-item .portfolio-category {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #666;
+    margin-bottom: 4px;
+  }
+
+  /* Featured items - remove gradient backgrounds on mobile */
+  .portfolio-item[data-featured="true"] {
+    background: none !important;
+    border-radius: 0;
   }
 
   .portfolio-item[data-featured="true"] .portfolio-text {
@@ -670,10 +692,6 @@ a:hover {
 
   .footer {
     padding: 40px 24px;
-  }
-
-  .portfolio-item:not([data-featured="true"]) {
-    padding: 0 24px;
   }
 }
 
