@@ -624,71 +624,59 @@ a:hover {
     max-height: none;
   }
 
-  /* All portfolio items on mobile - completely uniform styling */
-  .portfolio-item {
-    padding: 0;
-    margin-bottom: 32px;
-    max-width: none;
+  /* ALL portfolio items on mobile - identical styling, no featured differences */
+  .portfolio-item,
+  .portfolio-item[data-featured="true"] {
+    padding: 0 !important;
+    margin-bottom: 32px !important;
+    max-width: none !important;
     background: none !important;
-    border-radius: 0;
+    border-radius: 0 !important;
   }
 
-  .portfolio-item .portfolio-link {
-    margin-bottom: 16px;
-    width: 100%;
-    max-width: none;
-    border-radius: 0;
-    box-shadow: none;
+  .portfolio-item .portfolio-link,
+  .portfolio-item[data-featured="true"] .portfolio-link {
+    margin-bottom: 16px !important;
+    width: 100% !important;
+    max-width: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
 
-  .portfolio-item .portfolio-link img {
-    width: 100%;
-    height: auto;
-    display: block;
+  .portfolio-item .portfolio-link img,
+  .portfolio-item[data-featured="true"] .portfolio-link img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
   }
 
   .portfolio-item .portfolio-text,
+  .portfolio-item[data-featured="true"] .portfolio-text,
   .portfolio-item > p {
-    padding: 0 12px;
-    max-width: none;
-    margin: 0;
-  }
-
-  /* Override all featured item special styling on mobile */
-  .portfolio-item[data-featured="true"] {
-    padding: 0;
-    margin-bottom: 32px;
-    background: none !important;
-  }
-
-  .portfolio-item[data-featured="true"] .portfolio-link {
-    margin-bottom: 16px;
-  }
-
-  .portfolio-item[data-featured="true"] .portfolio-text {
-    padding: 0 12px;
-    max-width: none;
-    gap: 8px;
+    padding: 0 12px !important;
+    max-width: none !important;
+    margin: 0 0 4px 0 !important;
+    gap: 8px !important;
   }
 
   .portfolio-item .portfolio-title,
   .portfolio-item[data-featured="true"] .portfolio-title {
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0 0 4px 0;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    margin: 0 0 4px 0 !important;
   }
 
   .portfolio-item .portfolio-category,
   .portfolio-item[data-featured="true"] .portfolio-category {
-    font-size: 14px;
-    margin: 0 0 4px 0;
+    font-size: 14px !important;
+    margin: 0 0 4px 0 !important;
   }
 
   .portfolio-item .portfolio-description,
   .portfolio-item[data-featured="true"] .portfolio-description {
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
   }
 
   .main-content {
