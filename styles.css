@@ -306,7 +306,7 @@ a:hover {
   height: auto;
   padding: 60px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  background: linear-gradient(135deg, #ef5350 0%, #e53935 50%, #c62828 100%);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   margin-bottom: 40px;
 }
@@ -314,37 +314,37 @@ a:hover {
 /* Three colors only: red, blue, green - repeating pattern */
 .portfolio-item[data-featured="true"]:not(.hidden):nth-of-type(1)
   .portfolio-link {
-  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  background: linear-gradient(135deg, #ef5350 0%, #e53935 50%, #c62828 100%);
 }
 
 .portfolio-item[data-featured="true"]:not(.hidden):nth-of-type(2)
   .portfolio-link {
-  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 50%, #1565c0 100%);
 }
 
 .portfolio-item[data-featured="true"]:not(.hidden):nth-of-type(3)
   .portfolio-link {
-  background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
+  background: linear-gradient(135deg, #66bb6a 0%, #43a047 50%, #2e7d32 100%);
 }
 
 .portfolio-item[data-featured="true"]:not(.hidden):nth-of-type(4)
   .portfolio-link {
-  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  background: linear-gradient(135deg, #ef5350 0%, #e53935 50%, #c62828 100%);
 }
 
 .portfolio-item[data-featured="true"]:not(.hidden):nth-of-type(5)
   .portfolio-link {
-  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 50%, #1565c0 100%);
 }
 
 .portfolio-item[data-featured="true"]:not(.hidden):nth-of-type(6)
   .portfolio-link {
-  background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
+  background: linear-gradient(135deg, #66bb6a 0%, #43a047 50%, #2e7d32 100%);
 }
 
 .portfolio-item[data-featured="true"]:not(.hidden):nth-of-type(7)
   .portfolio-link {
-  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  background: linear-gradient(135deg, #ef5350 0%, #e53935 50%, #c62828 100%);
 }
 
 .portfolio-item[data-featured="true"] .portfolio-link img {
