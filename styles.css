@@ -604,6 +604,29 @@ a:hover {
   border-left: 4px solid #666;
 }
 
+/* Color-coded borders for portfolio categories on index page */
+a[href="projects/segment-opportunity-simulator.html"] .portfolio-category,
+a[href="projects/svod.html"] .portfolio-category {
+  border-left-color: #90cfff;
+}
+
+a[href="projects/agentic.html"] .portfolio-category,
+a[href="projects/lifetime-movie-club.html"] .portfolio-category {
+  border-left-color: #c9b0ff;
+}
+
+a[href="projects/louis-armstrong.html"] .portfolio-category {
+  border-left-color: #ffcc99;
+}
+
+a[href="projects/machine-learning.html"] .portfolio-category {
+  border-left-color: #ffb8d4;
+}
+
+a[href="projects/silhouette-art.html"] .portfolio-category {
+  border-left-color: #dec0ff;
+}
+
 .portfolio-title {
   font-size: 16px;
   color: var(--text-color);
