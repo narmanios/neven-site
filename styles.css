@@ -1018,7 +1018,7 @@ body:has(.project-page) .title-separator {
 
 body:has(.project-page) .header-main {
   gap: 24px;
-  justify-content: center;
+  width: auto;
 }
 
 .project-header {
