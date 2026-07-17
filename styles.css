@@ -1152,7 +1152,7 @@ body:has(.project-page) .header-main {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 12px;
-  margin-top: 60px;
+  margin-top: 48px;
   color: #666;
   font-style: normal;
   text-transform: uppercase;
@@ -1382,7 +1382,7 @@ body:has(.project-page) .header-main {
   .project-section h3 {
     font-size: 16px;
     font-weight: 600;
-    margin-top: 40px;
+    margin-top: 32px;
     padding: 8px 0 8px 20px;
     line-height: 1.5;
     letter-spacing: 0.5px;
