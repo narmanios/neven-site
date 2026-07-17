@@ -1074,35 +1074,30 @@ body:has(.project-page) .header-main {
   margin: 0 0 8px 0;
   color: #666;
   display: inline-block;
-  padding: 12px 24px;
-  background-color: #666;
-  border-radius: 6px;
+  padding: 8px 0 8px 20px;
+  border-left: 4px solid #666;
   line-height: 1.5;
 }
 
-.project-category::before {
-  display: none;
-}
-
-/* Color-coded backgrounds for project categories - five colors */
+/* Color-coded borders for project categories - five colors */
 .project-header.accent-red .project-category {
-  background-color: #90cfff;
+  border-left-color: #90cfff;
 }
 
 .project-header.accent-blue .project-category {
-  background-color: #c9b0ff;
+  border-left-color: #c9b0ff;
 }
 
 .project-header.accent-green .project-category {
-  background-color: #ffcc99;
+  border-left-color: #ffcc99;
 }
 
 .project-header.accent-magenta .project-category {
-  background-color: #ffb8d4;
+  border-left-color: #ffb8d4;
 }
 
 .project-header.accent-purple .project-category {
-  background-color: #dec0ff;
+  border-left-color: #dec0ff;
 }
 
 .project-title {
@@ -1158,36 +1153,31 @@ body:has(.project-page) .header-main {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   position: relative;
-  padding: 12px 24px;
-  background-color: #666;
-  border-radius: 6px;
+  padding: 8px 0 8px 20px;
+  border-left: 4px solid #666;
   display: inline-block;
   line-height: 1.5;
 }
 
-.project-section h3::before {
-  display: none;
-}
-
-/* Color-coded backgrounds for h3 headings - five colors */
+/* Color-coded borders for h3 headings - five colors */
 .project-header.accent-red ~ .project-content .project-section h3 {
-  background-color: #90cfff;
+  border-left-color: #90cfff;
 }
 
 .project-header.accent-blue ~ .project-content .project-section h3 {
-  background-color: #c9b0ff;
+  border-left-color: #c9b0ff;
 }
 
 .project-header.accent-green ~ .project-content .project-section h3 {
-  background-color: #ffcc99;
+  border-left-color: #ffcc99;
 }
 
 .project-header.accent-magenta ~ .project-content .project-section h3 {
-  background-color: #ffb8d4;
+  border-left-color: #ffb8d4;
 }
 
 .project-header.accent-purple ~ .project-content .project-section h3 {
-  background-color: #dec0ff;
+  border-left-color: #dec0ff;
 }
 
 .project-section .section-subheading {
@@ -1366,18 +1356,13 @@ body:has(.project-page) .header-main {
   .project-category {
     font-size: 16px;
     font-weight: 600;
-    padding: 12px 24px;
+    padding: 8px 0 8px 20px;
     line-height: 1.5;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #666;
     display: inline-block;
-    background-color: #666;
-    border-radius: 6px;
-  }
-
-  .project-category::before {
-    display: none;
+    border-left: 4px solid #666;
   }
 
   .project-title {
@@ -1393,14 +1378,13 @@ body:has(.project-page) .header-main {
     font-size: 16px;
     font-weight: 600;
     margin-top: 40px;
-    padding: 12px 24px;
+    padding: 8px 0 8px 20px;
     line-height: 1.5;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #666;
     display: inline-block;
-    background-color: #666;
-    border-radius: 6px;
+    border-left: 4px solid #666;
   }
 
   .project-section .section-subheading {
