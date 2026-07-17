@@ -755,7 +755,7 @@ a[href="projects/silhouette-art.html"] .portfolio-category {
 
   /* Smaller header on project pages - mobile */
   body:has(.project-page) .header {
-    padding: 48px 24px 16px;
+    padding: 24px 24px 16px;
   }
 
   body:has(.project-page) .photo-wrapper {
