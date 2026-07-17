@@ -821,11 +821,19 @@ a[href="projects/silhouette-art.html"] .portfolio-category {
     flex-wrap: nowrap;
     gap: 8px;
     padding: 0 24px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .filter-buttons::-webkit-scrollbar {
+    display: none;
   }
 
   .section-title {
     font-size: 20px;
     margin: 0 0 16px;
+    padding: 0 24px;
   }
 
   .subsection-title {
@@ -1427,5 +1435,16 @@ body:has(.project-page) .header-main {
   .notion-link-button {
     padding: 14px 24px;
     font-size: 15px;
+  }
+
+  /* Mobile fixes for inline grid styles */
+  .project-section div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Mobile fixes for centered images with max-width */
+  .project-image[style*="max-width: 70%"] {
+    max-width: 100% !important;
   }
 }
