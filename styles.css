@@ -443,52 +443,6 @@ a:hover {
   letter-spacing: 0.5px;
   margin: 0;
   color: #666;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.portfolio-item[data-featured="true"] .portfolio-category::before {
-  content: "";
-  width: 40px;
-  height: 0;
-  border-top: 2px solid #90cfff;
-}
-
-/* Color-coded lines - five color pattern */
-.portfolio-item[data-featured="true"]:nth-of-type(1)
-  .portfolio-category::before {
-  border-top-color: #90cfff;
-}
-
-.portfolio-item[data-featured="true"]:nth-of-type(2)
-  .portfolio-category::before {
-  border-top-color: #c9b0ff;
-}
-
-.portfolio-item[data-featured="true"]:nth-of-type(3)
-  .portfolio-category::before {
-  border-top-color: #ffcc99;
-}
-
-.portfolio-item[data-featured="true"]:nth-of-type(4)
-  .portfolio-category::before {
-  border-top-color: #ffb8d4;
-}
-
-.portfolio-item[data-featured="true"]:nth-of-type(5)
-  .portfolio-category::before {
-  border-top-color: #dec0ff;
-}
-
-.portfolio-item[data-featured="true"]:nth-of-type(6)
-  .portfolio-category::before {
-  border-top-color: #90cfff;
-}
-
-.portfolio-item[data-featured="true"]:nth-of-type(7)
-  .portfolio-category::before {
-  border-top-color: #c9b0ff;
 }
 
 .portfolio-item[data-featured="true"] .portfolio-description {
