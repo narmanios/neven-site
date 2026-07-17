@@ -978,6 +978,22 @@ a[href="projects/silhouette-art.html"] .portfolio-category {
   padding: 40px 0 60px;
 }
 
+/* Back to Home link on project pages */
+.back-to-home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+  z-index: 100;
+}
+
+.back-to-home:hover {
+  color: #000;
+}
+
 /* Smaller header on project pages */
 body:has(.project-page) .header {
   padding: 40px 0 30px;
@@ -1381,6 +1397,12 @@ body:has(.project-page) .header-main {
 
   .project-page {
     padding: 110px 24px 80px;
+  }
+
+  .back-to-home {
+    top: 16px;
+    left: 16px;
+    font-size: 13px;
   }
 
   .project-navigation {
