@@ -1553,6 +1553,10 @@ body:has(.project-page) .header-main {
     font-size: 16px !important;
   }
 
+  .desktop-only-iframe {
+    display: none;
+  }
+
   .project-page {
     padding: 110px 24px 80px;
   }
