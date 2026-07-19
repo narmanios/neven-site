@@ -1329,6 +1329,21 @@ body:has(.project-page) .header-main {
   color: #555;
 }
 
+.project-section ul,
+.project-section ol {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #555;
+  padding-left: 24px;
+  margin-left: 0;
+}
+
+.project-section ul li,
+.project-section ol li {
+  margin-bottom: 16px;
+}
+
 .project-image {
   width: 100%;
   margin: 40px 0;
@@ -1525,6 +1540,13 @@ body:has(.project-page) .header-main {
 
   .project-section p {
     font-size: 15px;
+  }
+
+  .project-section ul,
+  .project-section ol {
+    font-size: 15px;
+    padding-left: 20px;
+    margin-left: 0;
   }
 
   .project-image-caption {
