@@ -669,10 +669,6 @@ a[href="projects/silhouette-art.html"] .portfolio-category {
     font-size: 22px;
   }
 
-  .tagline {
-    font-size: 17px;
-  }
-
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
