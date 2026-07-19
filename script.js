@@ -159,3 +159,36 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
+// Project Navigation Menu Toggle (Mobile)
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const menuDropdown = document.querySelector(".menu-dropdown");
+
+  if (hamburger && menuDropdown) {
+    hamburger.addEventListener("click", function () {
+      this.classList.toggle("active");
+      menuDropdown.classList.toggle("active");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (
+        !e.target.closest(".project-nav-menu") &&
+        menuDropdown.classList.contains("active")
+      ) {
+        hamburger.classList.remove("active");
+        menuDropdown.classList.remove("active");
+      }
+    });
+
+    // Close menu when clicking a link
+    const menuLinks = document.querySelectorAll(".menu-link");
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        hamburger.classList.remove("active");
+        menuDropdown.classList.remove("active");
+      });
+    });
+  }
+});
