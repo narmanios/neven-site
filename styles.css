@@ -1035,7 +1035,7 @@ a[href="projects/silhouette-art.html"] .portfolio-category {
   right: 0;
   background: #fff;
   border: 1px solid #e5e5e5;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   min-width: 280px;
   opacity: 0;
@@ -1056,7 +1056,7 @@ a[href="projects/silhouette-art.html"] .portfolio-category {
 }
 
 .menu-section {
-  padding: 16px 0;
+  padding: 20px 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -1069,20 +1069,20 @@ a[href="projects/silhouette-art.html"] .portfolio-category {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #999;
-  padding: 0 20px 8px;
+  color: #000;
+  padding: 0 24px 8px;
 }
 
 .menu-link {
   display: block;
-  padding: 8px 20px;
+  padding: 10px 24px;
   font-size: 14px;
   color: #333;
   transition: background-color 0.2s;
 }
 
 .menu-link:hover {
-  background-color: #f5f5f5;
+  background-color: rgb(248, 246, 238);
   color: #000;
 }
 
