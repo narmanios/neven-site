@@ -5,7 +5,7 @@
     "segment-opportunity-simulator.html",
     "persona-pathways.html",
   ];
-  const CORRECT_PASSWORD = "apple";
+  const CORRECT_PASSWORD = "sky";
   const SESSION_DURATION = 20 * 60 * 1000; // 20 minutes in milliseconds
   const AUTH_KEY = "portfolioAuth";
 
