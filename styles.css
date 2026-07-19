@@ -1595,9 +1595,14 @@ body:has(.project-page) .header-main {
   }
 
   .project-navigation {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .desktop-only-caption {
+    display: none;
   }
 
   .notion-link-card {
@@ -1610,7 +1615,8 @@ body:has(.project-page) .header-main {
   }
 
   /* Mobile fixes for inline grid styles */
-  .project-section div[style*="grid-template-columns"] {
+  .project-section div[style*="grid-template-columns"],
+  .project-content div[style*="grid-template-columns"] {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
   }
