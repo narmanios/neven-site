@@ -1554,7 +1554,11 @@ body:has(.project-page) .header-main {
   }
 
   .desktop-only-iframe {
-    display: none;
+    display: block;
+  }
+
+  .desktop-only-iframe iframe {
+    height: 500px !important;
   }
 
   .project-page {
