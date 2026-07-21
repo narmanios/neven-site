@@ -132,18 +132,18 @@
                     <h3>The Real Question</h3>
                     <p class="section-subheading">How does AI know which data answers which question?</p>
                     <p>A chat box sitting on top of fragmented data just moves the
-                        problem. The AI answers confidently
-                        from whichever source it reaches first. The real question wasn't "how do we build a chat," it
+                        problem. The real question wasn't "how do we build a chat," it
                         was "how does the AI know which data answers which question?" That reframing set the constraint
                         for everything after: we needed a routing and synthesis layer underneath, not a UI wrapper, and
                         each module would need its own agent.</p>
 
                     <h3>The Constraint</h3>
-                    <p class="section-subheading">Build it right or ship it fast — I needed both</p>
+                    <p class="section-subheading">Build it right or ship it fast</p>
                     <p>That created a tension I had to resolve. The version that solved
                         the problem properly — every
-                        tool surfaced through the AI, agents reasoning across all sources, clarifying questions
-                        narrowing enormous datasets was a multi-quarter build. The business needed something in users'
+                        tool surfaced through the AI, agents reasoning across all data sources, asking clarifying
+                        questions along the way could be built but only over many quarters, not within 3 months. The
+                        business needed something in users'
                         hands quickly. Designing only the end state would have produced a beautiful prototype nobody
                         could ship.</p>
 
@@ -179,31 +179,10 @@
                         <p class="project-image-caption">AI assistant entry point</p>
                     </div> -->
 
-                    <h3>The MVP</h3>
-                    <p class="section-subheading">One working path instead of everything at once</p>
-                    <p>For the short-term MVP, I traded breadth for one working path. Instead
-                        of every module wired to
-                        its own agent, we shipped a single AI Research Assistant with a guided experience: users could
-                        ask anything, or start from deterministic prompts we'd pulled from prior research — the
-                        questions planners and analysts already asked most.</p>
-
-                    <div class="project-image">
-                        <img src="../images/agentic-modal-1.jpg" alt="Short-term Implementation">
-                        <p class="project-image-caption">Shipped MVP: single assistant with guided routing</p>
-                    </div>
-
-
-
-                    <p>What I gave up at launch was full cross-source reasoning. What I kept, deliberately, was the
-                        clarifying question mechanism. It was the piece that made the MVP feel intelligent rather than
-                        scripted, and it was the same mechanism the long-term system would scale on. The MVP wasn't a
-                        throwaway; it was the first vertical slice of the real architecture.</p>
-
-
 
                     <h3>Institutional Knowledge</h3>
-                    <p class="section-subheading">Turning tacit expertise into actionable intelligence</p>
-                    <p>To make the routing trustworthy, we documented
+                    <p class="section-subheading">Turning expertise into actionable intelligence</p>
+                    <p>We documented
                         institutional knowledge as scripts, mapping the
                         input a planner would type to the output the AI should return sourced directly from media
                         planners, analysts, and strategists, turning this human expertise into something the AI system
@@ -224,6 +203,31 @@
                                 and Purchase Journey Insights agents parse inputs and return outputs</p>
                         </div>
                     </div>
+
+                    <h3>The MVP</h3>
+                    <p class="section-subheading">One working path instead of everything at once</p>
+                    <p>For the short-term MVP, I traded breadth for one working path. Instead
+                        of every module wired to
+                        its own agent, we shipped a single AI Research Assistant using selected data sources along with
+                        a guided experience. Users could
+                        ask anything, or start from deterministic prompts we'd pulled from prior research — the
+                        questions planners and analysts already asked most.</p>
+
+                    <div class="project-image">
+                        <img src="../images/agentic-modal-1.jpg" alt="Short-term Implementation">
+                        <p class="project-image-caption">Shipped MVP: single assistant with guided routing</p>
+                    </div>
+
+
+
+                    <p>What I gave up at launch was full cross-source reasoning. What I kept, deliberately, was the
+                        clarifying question mechanism. It was the piece that made the MVP feel intelligent rather than
+                        scripted, and it was the same mechanism the long-term system would scale on. The MVP wasn't a
+                        throwaway; it was the first vertical slice of the real architecture.</p>
+
+
+
+
 
                     <h3>Trust & Transparency</h3>
                     <p class="section-subheading">Every answer backed by sources you can verify</p>
