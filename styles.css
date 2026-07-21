@@ -408,7 +408,7 @@ a:hover {
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(5) .portfolio-link {
-  background: linear-gradient(135deg, #dec0ff 0%, #d0b0ff 100%);
+  background: linear-gradient(135deg, #c9b0ff 0%, #b89fff 100%);
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(6) .portfolio-link {
@@ -416,6 +416,10 @@ a:hover {
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(7) .portfolio-link {
+  background: linear-gradient(135deg, #90cfff 0%, #7bbfff 100%);
+}
+
+.portfolio-item[data-featured="true"]:nth-of-type(8) .portfolio-link {
   background: linear-gradient(135deg, #c9b0ff 0%, #b89fff 100%);
 }
 
@@ -559,6 +563,7 @@ a:hover {
 }
 
 /* Color-coded borders for portfolio categories on index page */
+/* Updated 2026-07-21 */
 a[href="projects/segment-opportunity-simulator.html"] .portfolio-category,
 a[href="projects/svod.html"] .portfolio-category {
   border-left-color: #90cfff;
@@ -574,11 +579,15 @@ a[href="projects/louis-armstrong.html"] .portfolio-category {
 }
 
 a[href="projects/machine-learning.html"] .portfolio-category {
-  border-left-color: #ffb8d4;
+  border-left-color: #90cfff;
 }
 
 a[href="projects/silhouette-art.html"] .portfolio-category {
-  border-left-color: #dec0ff;
+  border-left-color: #ffb8d4;
+}
+
+a[href="projects/banned-words.html"] .portfolio-category {
+  border-left-color: #c9b0ff;
 }
 
 .portfolio-title {
@@ -1184,6 +1193,10 @@ body:has(.project-page) .header-main {
   background: none;
 }
 
+.project-header.accent-teal {
+  background: none;
+}
+
 .project-header .project-image {
   width: 100%;
   margin: 40px 0 0 0;
@@ -1230,6 +1243,10 @@ body:has(.project-page) .header-main {
 
 .project-header.accent-purple .project-category {
   border-left-color: #dec0ff;
+}
+
+.project-header.accent-teal .project-category {
+  border-left-color: #a8e6cf;
 }
 
 .project-title {
