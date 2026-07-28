@@ -85,6 +85,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const portfolioItemsForFilter = document.querySelectorAll(".portfolio-item");
   const subsectionTitles = document.querySelectorAll(".subsection-title");
 
+  // Prevent portfolio tags from being clickable (keep hover states only)
+  const portfolioTags = document.querySelectorAll(".portfolio-tag");
+  portfolioTags.forEach((tag) => {
+    tag.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  });
+
   // Initialize with product design projects on page load
   portfolioItemsForFilter.forEach((item) => {
     const itemCategory = item.getAttribute("data-category");
