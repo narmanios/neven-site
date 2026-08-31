@@ -423,6 +423,11 @@ a:hover {
   background: linear-gradient(135deg, #c9b0ff 0%, #b89fff 100%);
 }
 
+.portfolio-item[data-featured="true"][data-project="presidents"]
+  .portfolio-link {
+  background: linear-gradient(135deg, #a8e6cf 0%, #93dbc1 100%);
+}
+
 /* Portfolio text section */
 .portfolio-item[data-featured="true"] .portfolio-text {
   display: flex;
@@ -588,6 +593,10 @@ a[href="projects/silhouette-art.html"] .portfolio-category {
 
 a[href="projects/banned-words.html"] .portfolio-category {
   border-left-color: #c9b0ff;
+}
+
+a[data-project="presidents"] .portfolio-category {
+  border-left-color: #a8e6cf;
 }
 
 .portfolio-title {
