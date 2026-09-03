@@ -219,7 +219,7 @@ a:hover {
 }
 
 .main-content:has(.filter-buttons) {
-  padding-top: 40px;
+  padding-top: 24px;
 }
 
 /* Section Title */
@@ -227,7 +227,7 @@ a:hover {
   font-size: 32px;
   font-weight: 600;
   text-align: center;
-  margin: 0 0 40px;
+  margin: 0 0 24px;
   color: var(--text-color);
 }
 
@@ -1051,6 +1051,8 @@ a[data-project="presidents"] .portfolio-category {
   position: absolute;
   top: 100%;
   right: 0;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
@@ -1078,8 +1080,14 @@ a[data-project="presidents"] .portfolio-category {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.menu-section:last-child {
+.menu-dropdown > .menu-section:first-child {
+  order: 2;
   border-bottom: none;
+}
+
+.menu-dropdown > .menu-section:last-child {
+  order: 1;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .menu-section-title {
