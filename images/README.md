@@ -13,7 +13,6 @@ Place the following images in this directory:
 - `LA.png` - Louis Armstrong Data Visualization
 - `persona-pathways.jpg` - Persona Pathways project
 - `history-vault.jpg` - HISTORY Vault project
-- `machine-learning.jpg` - Machine Learning project
 - `women-climate.jpg` - Women and Climate Change project
 - `fake-news.jpg` - Fake News Visualization project
 - `banned-words.png` - Banned Words project

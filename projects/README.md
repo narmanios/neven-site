@@ -15,10 +15,9 @@ Create or update these files for each portfolio item:
 3. **louis-armstrong.html** - Louis Armstrong (Data Visualization)
 4. **persona-pathways.html** - Persona Pathways (Product Design)
 5. **svod.html** - HISTORY Vault (Product Design)
-6. **machine-learning.html** - Machine Learning (AI/ML)
-7. **women-climate.html** - Women and Climate Change (Data Visualization)
-8. **agentic.html** - Agentic (Product Design)
-9. **lifetime-movie-club.html** - Lifetime Movie Club (Product Design)
+6. **women-climate.html** - Women and Climate Change (Data Visualization)
+7. **agentic.html** - Agentic (Product Design)
+8. **lifetime-movie-club.html** - Lifetime Movie Club (Product Design)
 
 ## Template Structure
 

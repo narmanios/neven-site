@@ -94,20 +94,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Initialize with data visualization projects on page load
+  // Initialize with product design projects on page load
   portfolioItemsForFilter.forEach((item) => {
     const itemCategory = item.getAttribute("data-category");
-    if (itemCategory === "data-visualization") {
+    if (itemCategory === "product-design") {
       item.classList.remove("hidden");
     } else {
       item.classList.add("hidden");
     }
   });
 
-  // Hide subsection titles that don't match data-visualization on initial load
+  // Hide subsection titles that don't match product-design on initial load
   subsectionTitles.forEach((title) => {
     const titleCategory = title.getAttribute("data-category");
-    if (titleCategory && titleCategory !== "data-visualization") {
+    if (titleCategory && titleCategory !== "product-design") {
       title.classList.add("hidden");
     }
   });
