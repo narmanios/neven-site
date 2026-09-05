@@ -87,13 +87,16 @@ Here are your project URLs that need password access:
 5. **HISTORY Vault**  
    https://www.nevenarmanios.com/product-design-history-vault
 
-6. **Women and Climate Change**  
+6. **Machine Learning**  
+   https://www.nevenarmanios.com/machine-learning
+
+7. **Women and Climate Change**  
    https://www.nevenarmanios.com/women-and-climate-change
 
-7. **Agentic**  
+8. **Agentic**  
    https://www.nevenarmanios.com/agentic
 
-8. **Lifetime Movie Club**  
+9. **Lifetime Movie Club**  
    https://www.nevenarmanios.com/product-design-lifetime-movie-club
 
 ## Tips for Content Transfer
