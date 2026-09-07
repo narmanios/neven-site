@@ -653,7 +653,8 @@ a[href="projects/svod.html"].theme-history-vault .portfolio-category {
   border-left-color: #ecd39a;
 }
 
-a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club .portfolio-category {
+a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
+  .portfolio-category {
   border-left-color: #d86a94;
 }
 
@@ -1280,16 +1281,24 @@ body:has(.project-page) .header-main {
 .project-header.theme-history-vault,
 .project-header.theme-lifetime-movie-club {
   padding: 32px 32px 24px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+  border: none;
+  box-shadow: none;
 }
 
 .project-header.theme-history-vault {
-  background: linear-gradient(135deg, rgba(236, 211, 154, 0.78) 0%, rgba(214, 170, 77, 0.92) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(236, 211, 154, 0.78) 0%,
+    rgba(214, 170, 77, 0.92) 100%
+  );
 }
 
 .project-header.theme-lifetime-movie-club {
-  background: linear-gradient(135deg, rgba(240, 191, 210, 0.78) 0%, rgba(218, 123, 155, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(240, 191, 210, 0.78) 0%,
+    rgba(218, 123, 155, 0.9) 100%
+  );
 }
 
 /* Removed color backgrounds for project pages - now using dashed lines instead */
@@ -1333,7 +1342,7 @@ body:has(.project-page) .header-main {
 
 .project-header.theme-history-vault .project-image img,
 .project-header.theme-lifetime-movie-club .project-image img {
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
 }
 
 .project-category {
@@ -1462,11 +1471,17 @@ body:has(.project-page) .header-main {
   border-left-color: #dec0ff;
 }
 
-.project-header.accent-red.theme-history-vault ~ .project-content .project-section h3 {
+.project-header.accent-red.theme-history-vault
+  ~ .project-content
+  .project-section
+  h3 {
   border-left-color: #ecd39a;
 }
 
-.project-header.accent-blue.theme-lifetime-movie-club ~ .project-content .project-section h3 {
+.project-header.accent-blue.theme-lifetime-movie-club
+  ~ .project-content
+  .project-section
+  h3 {
   border-left-color: #d86a94;
 }
 
