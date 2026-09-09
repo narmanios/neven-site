@@ -82,7 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Portfolio Filter Functionality
   const filterButtons = document.querySelectorAll(".filter-btn");
-  const portfolioItemsForFilter = document.querySelectorAll(".portfolio-item");
+  const portfolioItemsForFilter = document.querySelectorAll(
+    ".portfolio-item, .secondary-project-row",
+  );
   const subsectionTitles = document.querySelectorAll(".subsection-title");
 
   // Prevent portfolio tags from being clickable (keep hover states only)

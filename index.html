@@ -176,11 +176,10 @@
                 <a href="projects/silhouette-art.html" class="portfolio-item" data-category="data-visualization"
                     data-featured="true">
                     <div class="portfolio-link">
-                        <div class="portfolio-image" style="position: relative;">
+                        <div class="portfolio-image portfolio-image-composite">
                             <img src="images/silhouette-thumbnail.jpg" alt="Silhouette Art"
-                                style="width: 100%; height: auto; border-radius: 6px; display: block;">
-                            <img src="images/silhouette-animation.gif" alt=""
-                                style="position: absolute; top: 12%; right: 5%; width: 220px; max-width: 30%; transform: scaleX(-1);">
+                                class="portfolio-image-base">
+                            <img src="images/silhouette-animation.gif" alt="" class="portfolio-image-overlay">
                         </div>
                         <div class="portfolio-tags">
                             <span class="portfolio-tag"
@@ -246,27 +245,6 @@
                     </div>
                 </a>
 
-                <a href="projects/machine-learning.html" class="portfolio-item" data-category="data-visualization"
-                    data-featured="true">
-                    <div class="portfolio-link">
-                        <img src="images/machine-learning-thumbnail.jpg" alt="Machine Learning" class="portfolio-image">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag"
-                                data-tooltip="KMeans clustering to organize fine art collections">ML</span>
-                            <span class="portfolio-tag"
-                                data-tooltip="Elbow graphs and silhouette analysis methods">Visual</span>
-                            <span class="portfolio-tag" data-tooltip="Making complex AI concepts accessible">Data
-                                Viz</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-text">
-                        <p class="portfolio-category">AI/ML</p>
-                        <p class="portfolio-title">Machine Learning</p>
-                        <p class="portfolio-description">Machine learning project exploring KMeans clustering to
-                            organize a collection of fine art images based on their metadata. </p>
-                    </div>
-                </a>
-
                 <a href="projects/svod.html" class="portfolio-item theme-history-vault" data-category="product-design"
                     data-featured="true">
                     <div class="portfolio-link">
@@ -311,39 +289,53 @@
 
                 <h3 class="subsection-title" data-category="product-design">Other B2C Product Projects</h3>
 
-                <div class="portfolio-item" data-category="product-design">
-                    <a href="projects/middle-school.html" class="portfolio-link">
-                        <img src="images/middle-school-thumbnail-logo.png" alt="ABZ NYC Middle School App">
-                    </a>
-                    <a href="projects/middle-school.html" style="text-decoration: none; color: inherit;">
-                        <p class="portfolio-category">B2C Product Design · Exploration</p>
-                        <p class="portfolio-title">ABZ NYC Middle School App</p>
-                    </a>
+                <div class="secondary-project-row" data-category="product-design">
+                    <div class="portfolio-item secondary-project" data-category="product-design">
+                        <a href="projects/middle-school.html" class="portfolio-link">
+                            <img src="images/middle-school-thumbnail-logo.png" alt="ABZ NYC Middle School App">
+                        </a>
+                        <a href="projects/middle-school.html" style="text-decoration: none; color: inherit;">
+                            <p class="portfolio-category">B2C Product Design · Exploration</p>
+                            <p class="portfolio-title">ABZ NYC Middle School App</p>
+                        </a>
+                    </div>
                 </div>
 
                 <h3 class="subsection-title" data-category="data-visualization">Other Data Visualizations</h3>
 
-                <div class="portfolio-item" data-category="data-visualization">
-                    <a href="https://narmanios.github.io/fake_news/" class="portfolio-link external-link"
-                        target="_blank" data-confirm="true">
-                        <img src="images/fake-news.jpg" alt="Fake News Visualization">
-                        <span class="external-icon">↗</span>
-                    </a>
-                    <a href="https://narmanios.github.io/fake_news/" target="_blank" data-confirm="true"
-                        style="text-decoration: none; color: inherit;">
-                        <p class="portfolio-category">Exploration</p>
-                        <p class="portfolio-title">Fake News</p>
-                    </a>
-                </div>
+                <div class="secondary-project-row" data-category="data-visualization">
+                    <div class="portfolio-item secondary-project" data-category="data-visualization">
+                        <a href="https://narmanios.github.io/fake_news/" class="portfolio-link external-link"
+                            target="_blank" data-confirm="true">
+                            <img src="images/fake-news.jpg" alt="Fake News Visualization">
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <a href="https://narmanios.github.io/fake_news/" target="_blank" data-confirm="true"
+                            style="text-decoration: none; color: inherit;">
+                            <p class="portfolio-category">Exploration</p>
+                            <p class="portfolio-title">Fake News</p>
+                        </a>
+                    </div>
 
-                <div class="portfolio-item" data-category="data-visualization">
-                    <a href="projects/women-climate.html" class="portfolio-link">
-                        <img src="images/women-climate-thumbnail.jpg" alt="Women and Climate Change">
-                    </a>
-                    <a href="projects/women-climate.html" style="text-decoration: none; color: inherit;">
-                        <p class="portfolio-category">Exploration</p>
-                        <p class="portfolio-title">Women & Climate Change</p>
-                    </a>
+                    <div class="portfolio-item secondary-project" data-category="data-visualization">
+                        <a href="projects/women-climate.html" class="portfolio-link">
+                            <img src="images/women-climate-thumbnail.jpg" alt="Women and Climate Change">
+                        </a>
+                        <a href="projects/women-climate.html" style="text-decoration: none; color: inherit;">
+                            <p class="portfolio-category">Exploration</p>
+                            <p class="portfolio-title">Women & Climate Change</p>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item secondary-project" data-category="data-visualization">
+                        <a href="projects/machine-learning.html" class="portfolio-link">
+                            <img src="images/machine-learning-thumbnail.jpg" alt="Machine Learning">
+                        </a>
+                        <a href="projects/machine-learning.html" style="text-decoration: none; color: inherit;">
+                            <p class="portfolio-category">AI/ML</p>
+                            <p class="portfolio-title">Machine Learning</p>
+                        </a>
+                    </div>
                 </div>
             </section>
         </div>
