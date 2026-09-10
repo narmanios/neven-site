@@ -20,14 +20,41 @@
     <style>
         .responsive-image-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1.06fr 0.94fr;
             gap: 20px;
             margin: 40px 0;
+            align-items: start;
+        }
+
+        .responsive-image-grid .project-image:first-child {
+            justify-self: start;
+        }
+
+        .responsive-image-grid .project-image:last-child {
+            justify-self: end;
+        }
+
+        .responsive-image-grid .project-image {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0;
+        }
+
+        .responsive-image-grid .project-image img {
+            width: auto;
+            max-width: 100%;
+            height: clamp(480px, 60vw, 680px);
         }
 
         @media (max-width: 768px) {
             .responsive-image-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .responsive-image-grid .project-image img {
+                width: 100%;
+                height: auto;
             }
         }
 
