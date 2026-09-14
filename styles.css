@@ -1307,23 +1307,17 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
 }
 
 .menu-section {
-  padding: 20px 0;
+  padding: 14px 0;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .menu-dropdown > .menu-section:first-child {
-  order: 2;
-  border-bottom: none;
-}
-
-/* Temporarily hide Product Design entries from all project menus. */
-.project-nav-menu .menu-dropdown > .menu-section:first-child {
-  display: none;
+  order: 1;
 }
 
 .menu-dropdown > .menu-section:last-child {
-  order: 1;
-  border-bottom: 1px solid #e5e5e5;
+  order: 2;
+  border-bottom: none;
 }
 
 .menu-section-title {
@@ -1332,12 +1326,12 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: #000;
-  padding: 0 24px 8px;
+  padding: 0 24px 5px;
 }
 
 .menu-link {
   display: block;
-  padding: 10px 24px;
+  padding: 7px 24px;
   font-size: 14px;
   color: #333;
   transition: background-color 0.2s;
