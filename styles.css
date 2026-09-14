@@ -11,6 +11,8 @@
   --text-secondary: #666666;
   --hover-color: #333333;
   --border-color: #e5e5e5;
+  --accent-pike-color: #5c5c5c;
+  --accent-pike-width: 3px;
   --spacing-unit: 8px;
 }
 
@@ -289,6 +291,11 @@ a:hover {
   justify-content: center;
 }
 
+/* Temporarily hide homepage category filters while keeping their markup intact. */
+.filter-buttons {
+  display: none;
+}
+
 .filter-btn {
   padding: 10px 24px;
   font-size: 16px;
@@ -316,8 +323,8 @@ a:hover {
 /* Portfolio Grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 36px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
   margin-bottom: 80px;
   overflow: visible;
 }
@@ -356,10 +363,10 @@ a:hover {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 20px;
-  padding: 28px;
+  gap: 16px;
+  padding: 22px;
   border-radius: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   overflow: visible;
 }
@@ -376,12 +383,12 @@ a:hover {
 
 .portfolio-item[data-featured="true"] .portfolio-link > img.portfolio-image,
 .portfolio-item[data-featured="true"] .portfolio-link > video.portfolio-image {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 
 .portfolio-image-composite {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   position: relative;
   overflow: hidden;
 }
@@ -417,10 +424,10 @@ a:hover {
 .portfolio-item[data-featured="true"] .portfolio-tag {
   background: rgba(255, 255, 255, 0.45);
   color: #444;
-  padding: 8px 14px;
+  padding: 7px 12px;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   white-space: nowrap;
   box-shadow: none;
@@ -464,57 +471,93 @@ a:hover {
 
 /* Five-color gradient pattern - Medium soft tones */
 .portfolio-item[data-featured="true"]:nth-of-type(1) .portfolio-link {
-  background: linear-gradient(135deg, #90cfff 0%, #7bbfff 100%);
+  background: #f3eadc;
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(2) .portfolio-link {
-  background: linear-gradient(135deg, #c9b0ff 0%, #b89fff 100%);
+  background: #f3eadc;
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(3) .portfolio-link {
-  background: linear-gradient(135deg, #ffcc99 0%, #ffbd88 100%);
+  background: #f3eadc;
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(4) .portfolio-link {
-  background: linear-gradient(135deg, #ffb8d4 0%, #ffa8c8 100%);
+  background: #f3eadc;
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(5) .portfolio-link {
-  background: linear-gradient(135deg, #c9b0ff 0%, #b89fff 100%);
+  background: #f3eadc;
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(6) .portfolio-link {
-  background: linear-gradient(135deg, #90cfff 0%, #7bbfff 100%);
+  background: #f3eadc;
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(7) .portfolio-link {
-  background: linear-gradient(135deg, #90cfff 0%, #7bbfff 100%);
+  background: #f3eadc;
 }
 
 .portfolio-item[data-featured="true"]:nth-of-type(8) .portfolio-link {
-  background: linear-gradient(135deg, #c9b0ff 0%, #b89fff 100%);
+  background: #f3eadc;
 }
 
 .portfolio-item[data-featured="true"][data-project="presidents"]
   .portfolio-link {
-  background: linear-gradient(135deg, #a8e6cf 0%, #93dbc1 100%);
+  background: #f3eadc;
+}
+
+.portfolio-item[data-featured="true"][data-project="presidents"]
+  .portfolio-tag {
+  background: rgba(243, 250, 255, 0.66);
+  border-color: rgba(227, 241, 255, 0.82);
 }
 
 a[href="projects/svod.html"].portfolio-item[data-featured="true"].theme-history-vault
   .portfolio-link {
-  background: linear-gradient(135deg, #ecd39a 0%, #d6aa4d 100%);
+  background: #f3eadc;
 }
 
 a[href="projects/lifetime-movie-club.html"].portfolio-item[data-featured="true"].theme-lifetime-movie-club
   .portfolio-link {
-  background: linear-gradient(135deg, #f0bfd2 0%, #da7b9b 100%);
+  background: #f3eadc;
+}
+
+a[href="https://narmanios.github.io/fake_news/"].portfolio-item[data-featured="true"].theme-fake-news
+  .portfolio-link {
+  background: #f3eadc;
+}
+
+a[href="projects/women-climate.html"].portfolio-item[data-featured="true"].theme-women-climate
+  .portfolio-link {
+  background: #f3eadc;
+}
+
+.portfolio-item[data-featured="true"] .portfolio-link {
+  background: #f3eadc;
+}
+
+.portfolio-item[data-featured="true"].theme-fake-news .portfolio-tag {
+  background: rgba(255, 250, 243, 0.72);
+  border-color: rgba(242, 231, 211, 0.9);
+}
+
+.portfolio-item[data-featured="true"].theme-women-climate .portfolio-tag {
+  background: rgba(255, 250, 243, 0.72);
+  border-color: rgba(242, 231, 211, 0.9);
+}
+
+.portfolio-item[data-featured="true"][data-project="presidents"]
+  .portfolio-tag {
+  background: rgba(255, 250, 243, 0.72);
+  border-color: rgba(242, 231, 211, 0.9);
 }
 
 /* Portfolio text section */
 .portfolio-item[data-featured="true"] .portfolio-text {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   text-align: left;
   max-width: none;
   width: 100%;
@@ -522,14 +565,14 @@ a[href="projects/lifetime-movie-club.html"].portfolio-item[data-featured="true"]
 }
 
 .portfolio-item[data-featured="true"] .portfolio-title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.3;
   margin: 0;
 }
 
 .portfolio-item[data-featured="true"] .portfolio-category {
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0;
@@ -537,7 +580,7 @@ a[href="projects/lifetime-movie-club.html"].portfolio-item[data-featured="true"]
 }
 
 .portfolio-item[data-featured="true"] .portfolio-description {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
   color: #555;
   margin: 0;
@@ -545,8 +588,8 @@ a[href="projects/lifetime-movie-club.html"].portfolio-item[data-featured="true"]
 
 /* Keep filtered featured sets in a stable 2x2 grid */
 .portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 36px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
 }
 
 .portfolio-item.top-featured:not(.recent-small):not([data-featured="true"]) {
@@ -678,48 +721,52 @@ a[href="projects/lifetime-movie-club.html"].portfolio-item[data-featured="true"]
   margin-bottom: 0;
   display: inline-block;
   padding: 8px 0 8px 20px;
-  border-left: 4px solid #666;
+  border-left: var(--accent-pike-width) solid #666;
 }
 
 /* Color-coded borders for portfolio categories on index page */
 /* Updated 2026-07-21 */
 a[href="projects/segment-opportunity-simulator.html"] .portfolio-category,
 a[href="projects/svod.html"] .portfolio-category {
-  border-left-color: #90cfff;
+  border-left-color: var(--accent-pike-color);
 }
 
 a[href="projects/agentic.html"] .portfolio-category,
 a[href="projects/lifetime-movie-club.html"] .portfolio-category {
-  border-left-color: #c9b0ff;
+  border-left-color: var(--accent-pike-color);
 }
 
 a[href="projects/louis-armstrong.html"] .portfolio-category {
-  border-left-color: #ffcc99;
-}
-
-a[href="projects/machine-learning.html"] .portfolio-category {
-  border-left-color: #90cfff;
+  border-left-color: var(--accent-pike-color);
 }
 
 a[href="projects/silhouette-art.html"] .portfolio-category {
-  border-left-color: #ffb8d4;
+  border-left-color: var(--accent-pike-color);
 }
 
 a[href="projects/banned-words.html"] .portfolio-category {
-  border-left-color: #c9b0ff;
+  border-left-color: var(--accent-pike-color);
+}
+
+a[href="https://narmanios.github.io/fake_news/"] .portfolio-category {
+  border-left-color: var(--accent-pike-color);
+}
+
+a[href="projects/women-climate.html"].theme-women-climate .portfolio-category {
+  border-left-color: var(--accent-pike-color);
 }
 
 a[data-project="presidents"] .portfolio-category {
-  border-left-color: #a8e6cf;
+  border-left-color: var(--accent-pike-color);
 }
 
 a[href="projects/svod.html"].theme-history-vault .portfolio-category {
-  border-left-color: #ecd39a;
+  border-left-color: var(--accent-pike-color);
 }
 
 a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
   .portfolio-category {
-  border-left-color: #d86a94;
+  border-left-color: var(--accent-pike-color);
 }
 
 .portfolio-title {
@@ -797,6 +844,17 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
 }
 
 /* Responsive Design */
+@media (max-width: 1280px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  .portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 1024px) {
   .header-main {
     gap: 24px;
@@ -811,12 +869,12 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
   }
 
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
   }
 
   .portfolio-grid:has(.portfolio-item.top-featured:not(.hidden)) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .portfolio-item.top-featured:not(.recent-small):not([data-featured="true"]) {
@@ -1225,6 +1283,11 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
   border-bottom: none;
 }
 
+/* Temporarily hide Product Design entries from all project menus. */
+.project-nav-menu .menu-dropdown > .menu-section:first-child {
+  display: none;
+}
+
 .menu-dropdown > .menu-section:last-child {
   order: 1;
   border-bottom: 1px solid #e5e5e5;
@@ -1377,6 +1440,10 @@ body:has(.project-page) .header-main {
   background: none;
 }
 
+.project-header.accent-women-climate {
+  background: none;
+}
+
 .project-header .project-image {
   width: 100%;
   margin: 40px 0 0 0;
@@ -1405,41 +1472,45 @@ body:has(.project-page) .header-main {
   color: #666;
   display: inline-block;
   padding: 8px 0 8px 20px;
-  border-left: 4px solid #666;
+  border-left: var(--accent-pike-width) solid #666;
   line-height: 1.5;
 }
 
 /* Color-coded borders for project categories - five colors */
 .project-header.accent-red .project-category {
-  border-left-color: #90cfff;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-blue .project-category {
-  border-left-color: #c9b0ff;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-green .project-category {
-  border-left-color: #ffcc99;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-magenta .project-category {
-  border-left-color: #ffb8d4;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-purple .project-category {
-  border-left-color: #dec0ff;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-teal .project-category {
-  border-left-color: #a8e6cf;
+  border-left-color: var(--accent-pike-color);
+}
+
+.project-header.accent-women-climate .project-category {
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-red.theme-history-vault .project-category {
-  border-left-color: #ecd39a;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-blue.theme-lifetime-movie-club .project-category {
-  border-left-color: #d86a94;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-title {
@@ -1496,44 +1567,48 @@ body:has(.project-page) .header-main {
   letter-spacing: 0.5px;
   position: relative;
   padding: 8px 0 8px 20px;
-  border-left: 4px solid #666;
+  border-left: var(--accent-pike-width) solid #666;
   display: inline-block;
   line-height: 1.5;
 }
 
 /* Color-coded borders for h3 headings - five colors */
 .project-header.accent-red ~ .project-content .project-section h3 {
-  border-left-color: #90cfff;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-blue ~ .project-content .project-section h3 {
-  border-left-color: #c9b0ff;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-green ~ .project-content .project-section h3 {
-  border-left-color: #ffcc99;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-magenta ~ .project-content .project-section h3 {
-  border-left-color: #ffb8d4;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-purple ~ .project-content .project-section h3 {
-  border-left-color: #dec0ff;
+  border-left-color: var(--accent-pike-color);
+}
+
+.project-header.accent-women-climate ~ .project-content .project-section h3 {
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-red.theme-history-vault
   ~ .project-content
   .project-section
   h3 {
-  border-left-color: #ecd39a;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-header.accent-blue.theme-lifetime-movie-club
   ~ .project-content
   .project-section
   h3 {
-  border-left-color: #d86a94;
+  border-left-color: var(--accent-pike-color);
 }
 
 .project-section .section-subheading {
@@ -1727,13 +1802,12 @@ body:has(.project-page) .header-main {
   .project-category {
     font-size: 16px;
     font-weight: 600;
-    padding: 8px 0 8px 20px;
+    border-left: var(--accent-pike-width) solid #666;
     line-height: 1.5;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #666;
     display: inline-block;
-    border-left: 4px solid #666;
   }
 
   .project-title {
@@ -1748,14 +1822,13 @@ body:has(.project-page) .header-main {
   .project-section h3 {
     font-size: 16px;
     font-weight: 600;
-    margin-top: 32px;
+    border-left: var(--accent-pike-width) solid #666;
     padding: 8px 0 8px 20px;
     line-height: 1.5;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #666;
     display: inline-block;
-    border-left: 4px solid #666;
   }
 
   .project-section .section-subheading {
