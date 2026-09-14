@@ -799,6 +799,39 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
   text-decoration: underline;
 }
 
+.drawings-page .container {
+  max-width: 1320px;
+}
+
+.drawings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.drawing-card {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.drawing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.drawing-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Footer */
 .footer {
   border-top: 1px solid var(--border-color);
