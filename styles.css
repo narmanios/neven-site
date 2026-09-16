@@ -800,18 +800,21 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
 }
 
 .drawings-page .container {
-  max-width: 1320px;
+  max-width: 1200px;
 }
 
 .drawings-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
   align-items: start;
 }
 
 .drawing-card {
   display: block;
+  width: 100%;
+  max-width: 280px;
+  justify-self: center;
   border-radius: 8px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.45);
@@ -830,6 +833,41 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
   width: 100%;
   height: auto;
   display: block;
+}
+
+.drawing-card video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+}
+
+.drawings-grid[aria-label="Animations gallery"] .drawing-card {
+  aspect-ratio: 16 / 9;
+}
+
+.drawings-grid[aria-label="Animations gallery"] .drawing-card video {
+  height: 100%;
+  object-fit: cover;
+}
+
+.drawings-grid[aria-label="Animations gallery"] .drawing-card video:fullscreen,
+.drawings-grid[aria-label="Animations gallery"]
+  .drawing-card
+  video:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.drawings-subgroup-title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #666;
+  margin: 10px 0 18px;
 }
 
 /* Footer */
