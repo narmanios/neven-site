@@ -805,15 +805,15 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
 
 .drawings-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  gap: 16px;
   align-items: start;
 }
 
 .drawing-card {
   display: block;
   width: 100%;
-  max-width: 280px;
+  max-width: 236px;
   justify-self: center;
   border-radius: 8px;
   overflow: hidden;
@@ -822,6 +822,10 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+}
+
+.drawings-grid[aria-label="Drawings gallery"] .drawing-card {
+  max-width: 208px;
 }
 
 .drawing-card:hover {
