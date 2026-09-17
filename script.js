@@ -174,8 +174,8 @@ document.addEventListener("DOMContentLoaded", function () {
           title.classList.add("hidden");
         }
       });
+    });
   });
-
 });
 
 // Handle external links
