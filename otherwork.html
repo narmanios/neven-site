@@ -18,10 +18,11 @@
     <title>Other work | Neven Armanios</title>
     <link rel="preload" href="images/profile-photo2.png" as="image">
     <link rel="icon" type="image/png" href="images/favicon-profile.png">
-    <link rel="stylesheet" href="styles.css?v=20260914-drawings">
+    <link rel="stylesheet" href="styles.css?v=20260917-lightbox-controls">
 </head>
 
 <body>
+    <div id="lightbox-dismiss" class="lightbox-dismiss-target" aria-hidden="true"></div>
     <a href="index.html" class="back-to-home">← Back to Home</a>
     <nav class="project-nav-menu">
         <button class="menu-toggle" aria-label="Projects Menu">All Projects</button>
@@ -92,117 +93,406 @@
     <main class="main-content project-page drawings-page">
         <div class="container">
             <div class="project-content">
-                <section class="project-section">
+                <section class="project-section" id="drawings-section">
                     <h3>Drawings</h3>
                     <p class="section-subheading">Objects to tell stories</p>
                     <section class="drawings-grid" aria-label="Drawings gallery">
-                        <a href="images/drawings/IMG_8518.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8518.jpg" alt="Drawing 1"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8538.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8538.jpg" alt="Drawing 2"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8520.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8520.jpg" alt="Drawing 3"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8525.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8525.jpg" alt="Drawing 4"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8527.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8527.jpg" alt="Drawing 5"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8528.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8528.jpg" alt="Drawing 6"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8529.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8529.jpg" alt="Drawing 7"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8530.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8530.jpg" alt="Drawing 8"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8533.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8533.jpg" alt="Drawing 9"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8535.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8535.jpg" alt="Drawing 10"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8537.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8537.jpg" alt="Drawing 11"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8521.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8521.jpg" alt="Drawing 13"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8523.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8523.jpg" alt="Drawing 15"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8531.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8531.jpg" alt="Drawing 16"
-                                loading="lazy"></a>
-                        <a href="images/drawings/IMG_8536.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/drawings/IMG_8536.jpg" alt="Drawing 17"
-                                loading="lazy"></a>
+                        <a href="#drawings-1" class="drawing-card" id="drawing-thumb-1"><img
+                                src="images/drawings/IMG_8518.jpg" alt="Drawing 1" loading="lazy"></a>
+                        <a href="#drawings-2" class="drawing-card" id="drawing-thumb-2"><img
+                                src="images/drawings/IMG_8538.jpg" alt="Drawing 2" loading="lazy"></a>
+                        <a href="#drawings-3" class="drawing-card" id="drawing-thumb-3"><img
+                                src="images/drawings/IMG_8520.jpg" alt="Drawing 3" loading="lazy"></a>
+                        <a href="#drawings-4" class="drawing-card" id="drawing-thumb-4"><img
+                                src="images/drawings/IMG_8525.jpg" alt="Drawing 4" loading="lazy"></a>
+                        <a href="#drawings-5" class="drawing-card" id="drawing-thumb-5"><img
+                                src="images/drawings/IMG_8527.jpg" alt="Drawing 5" loading="lazy"></a>
+                        <a href="#drawings-6" class="drawing-card" id="drawing-thumb-6"><img
+                                src="images/drawings/IMG_8528.jpg" alt="Drawing 6" loading="lazy"></a>
+                        <a href="#drawings-7" class="drawing-card" id="drawing-thumb-7"><img
+                                src="images/drawings/IMG_8529.jpg" alt="Drawing 7" loading="lazy"></a>
+                        <a href="#drawings-8" class="drawing-card" id="drawing-thumb-8"><img
+                                src="images/drawings/IMG_8530.jpg" alt="Drawing 8" loading="lazy"></a>
+                        <a href="#drawings-9" class="drawing-card" id="drawing-thumb-9"><img
+                                src="images/drawings/IMG_8533.jpg" alt="Drawing 9" loading="lazy"></a>
+                        <a href="#drawings-10" class="drawing-card" id="drawing-thumb-10"><img
+                                src="images/drawings/IMG_8535.jpg" alt="Drawing 10" loading="lazy"></a>
+                        <a href="#drawings-11" class="drawing-card" id="drawing-thumb-11"><img
+                                src="images/drawings/IMG_8537.jpg" alt="Drawing 11" loading="lazy"></a>
+                        <a href="#drawings-12" class="drawing-card" id="drawing-thumb-12"><img
+                                src="images/drawings/IMG_8521.jpg" alt="Drawing 13" loading="lazy"></a>
+                        <a href="#drawings-13" class="drawing-card" id="drawing-thumb-13"><img
+                                src="images/drawings/IMG_8523.jpg" alt="Drawing 15" loading="lazy"></a>
+                        <a href="#drawings-14" class="drawing-card" id="drawing-thumb-14"><img
+                                src="images/drawings/IMG_8531.jpg" alt="Drawing 16" loading="lazy"></a>
+                        <a href="#drawings-15" class="drawing-card" id="drawing-thumb-15"><img
+                                src="images/drawings/IMG_8536.jpg" alt="Drawing 17" loading="lazy"></a>
                     </section>
                 </section>
 
-                <section class="project-section">
+                <section class="project-section" id="storytelling-section">
                     <h3>Storytelling</h3>
                     <p class="section-subheading">A lens that helps ideas land</p>
                     <section class="drawings-grid" aria-label="Storytelling gallery">
-                        <a href="images/story-telling/Index.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/story-telling/Index.jpg" alt="Storytelling index"
+                        <a href="#storytelling-1" class="drawing-card" id="storytelling-thumb-1"><img
+                                src="images/story-telling/Index.jpg" alt="Storytelling index" loading="lazy"></a>
+                        <a href="#storytelling-2" class="drawing-card" id="storytelling-thumb-2"><img
+                                src="images/story-telling/1-so-what.jpg" alt="Storytelling panel 1" loading="lazy"></a>
+                        <a href="#storytelling-3" class="drawing-card" id="storytelling-thumb-3"><img
+                                src="images/story-telling/2-take-action.jpg" alt="Storytelling panel 2"
                                 loading="lazy"></a>
-                        <a href="images/story-telling/1-so-what.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/story-telling/1-so-what.jpg"
-                                alt="Storytelling panel 1" loading="lazy"></a>
-                        <a href="images/story-telling/2-take-action.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/story-telling/2-take-action.jpg"
-                                alt="Storytelling panel 2" loading="lazy"></a>
-                        <a href="images/story-telling/3-right-data.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/story-telling/3-right-data.jpg"
-                                alt="Storytelling panel 3" loading="lazy"></a>
-                        <a href="images/story-telling/4-right-visuals.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/story-telling/4-right-visuals.jpg"
-                                alt="Storytelling panel 4" loading="lazy"></a>
-                        <a href="images/story-telling/5-right-words.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/story-telling/5-right-words.jpg"
-                                alt="Storytelling panel 5" loading="lazy"></a>
-                        <a href="images/story-telling/6-narrative.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/story-telling/6-narrative.jpg"
-                                alt="Storytelling panel 6" loading="lazy"></a>
-                        <a href="images/story-telling/7-credible.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/story-telling/7-credible.jpg"
-                                alt="Storytelling panel 7" loading="lazy"></a>
-                        <a href="images/story-telling/8-respect.jpg" class="drawing-card" target="_blank"
-                            rel="noopener noreferrer"><img src="images/story-telling/8-respect.jpg"
-                                alt="Storytelling panel 8" loading="lazy"></a>
+                        <a href="#storytelling-4" class="drawing-card" id="storytelling-thumb-4"><img
+                                src="images/story-telling/3-right-data.jpg" alt="Storytelling panel 3"
+                                loading="lazy"></a>
+                        <a href="#storytelling-5" class="drawing-card" id="storytelling-thumb-5"><img
+                                src="images/story-telling/4-right-visuals.jpg" alt="Storytelling panel 4"
+                                loading="lazy"></a>
+                        <a href="#storytelling-6" class="drawing-card" id="storytelling-thumb-6"><img
+                                src="images/story-telling/5-right-words.jpg" alt="Storytelling panel 5"
+                                loading="lazy"></a>
+                        <a href="#storytelling-7" class="drawing-card" id="storytelling-thumb-7"><img
+                                src="images/story-telling/6-narrative.jpg" alt="Storytelling panel 6"
+                                loading="lazy"></a>
+                        <a href="#storytelling-8" class="drawing-card" id="storytelling-thumb-8"><img
+                                src="images/story-telling/7-credible.jpg" alt="Storytelling panel 7" loading="lazy"></a>
+                        <a href="#storytelling-9" class="drawing-card" id="storytelling-thumb-9"><img
+                                src="images/story-telling/8-respect.jpg" alt="Storytelling panel 8" loading="lazy"></a>
                     </section>
                 </section>
 
-                <section class="project-section">
+                <section class="project-section" id="animations-section">
                     <h3>Animations</h3>
                     <p class="section-subheading">Motion that helps tell a story</p>
                     <section class="drawings-grid" aria-label="Animations gallery">
-                        <div class="drawing-card"><video src="images/animation/video1.mp4" autoplay loop muted
-                                playsinline controls preload="metadata"></video></div>
-                        <div class="drawing-card"><video src="images/animation/video2.mp4" autoplay loop muted
-                                playsinline controls preload="metadata"></video></div>
-                        <div class="drawing-card"><video src="images/animation/video3.mp4" autoplay loop muted
-                                playsinline controls preload="metadata"></video></div>
-                        <div class="drawing-card"><video src="images/animation/video4.mp4" autoplay loop muted
-                                playsinline controls preload="metadata"></video></div>
-                        <div class="drawing-card"><video src="images/animation/video5.mp4" autoplay loop muted
-                                playsinline controls preload="metadata"></video></div>
-                        <div class="drawing-card"><video src="images/animation/video6.mp4" autoplay loop muted
-                                playsinline controls preload="metadata"></video></div>
-                        <div class="drawing-card"><video src="images/animation/video7.mp4" autoplay loop muted
-                                playsinline controls preload="metadata"></video></div>
-                        <div class="drawing-card"><video src="images/animation/orimarsflyingmachine.mp4" autoplay loop
-                                muted playsinline controls preload="metadata"></video></div>
+                        <a href="#animations-1" class="drawing-card" id="animation-thumb-1"><video
+                                src="images/animation/video1.mp4" autoplay loop muted playsinline
+                                preload="metadata"></video></a>
+                        <a href="#animations-2" class="drawing-card" id="animation-thumb-2"><video
+                                src="images/animation/video2.mp4" autoplay loop muted playsinline
+                                preload="metadata"></video></a>
+                        <a href="#animations-3" class="drawing-card" id="animation-thumb-3"><video
+                                src="images/animation/video3.mp4" autoplay loop muted playsinline
+                                preload="metadata"></video></a>
+                        <a href="#animations-4" class="drawing-card" id="animation-thumb-4"><video
+                                src="images/animation/video4.mp4" autoplay loop muted playsinline
+                                preload="metadata"></video></a>
+                        <a href="#animations-5" class="drawing-card" id="animation-thumb-5"><video
+                                src="images/animation/video5.mp4" autoplay loop muted playsinline
+                                preload="metadata"></video></a>
+                        <a href="#animations-6" class="drawing-card" id="animation-thumb-6"><video
+                                src="images/animation/video6.mp4" autoplay loop muted playsinline
+                                preload="metadata"></video></a>
+                        <a href="#animations-7" class="drawing-card" id="animation-thumb-7"><video
+                                src="images/animation/video7.mp4" autoplay loop muted playsinline
+                                preload="metadata"></video></a>
+                        <a href="#animations-8" class="drawing-card" id="animation-thumb-8"><video
+                                src="images/animation/orimarsflyingmachine.mp4" autoplay loop muted playsinline
+                                preload="metadata"></video></a>
                     </section>
                 </section>
             </div>
         </div>
     </main>
+
+    <div id="drawings-1" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-15" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8518.jpg" alt="Drawing 1"></div><a
+                href="#drawings-2" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-2" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-1" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8538.jpg" alt="Drawing 2"></div><a
+                href="#drawings-3" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-3" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-2" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8520.jpg" alt="Drawing 3"></div><a
+                href="#drawings-4" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-4" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-3" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8525.jpg" alt="Drawing 4"></div><a
+                href="#drawings-5" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-5" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-4" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8527.jpg" alt="Drawing 5"></div><a
+                href="#drawings-6" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-6" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-5" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8528.jpg" alt="Drawing 6"></div><a
+                href="#drawings-7" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-7" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-6" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8529.jpg" alt="Drawing 7"></div><a
+                href="#drawings-8" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-8" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-7" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8530.jpg" alt="Drawing 8"></div><a
+                href="#drawings-9" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-9" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-8" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8533.jpg" alt="Drawing 9"></div><a
+                href="#drawings-10" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-10" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-9" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8535.jpg" alt="Drawing 10"></div><a
+                href="#drawings-11" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-11" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-10" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8537.jpg" alt="Drawing 11"></div><a
+                href="#drawings-12" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-12" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-11" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8521.jpg" alt="Drawing 13"></div><a
+                href="#drawings-13" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-13" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-12" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8523.jpg" alt="Drawing 15"></div><a
+                href="#drawings-14" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-14" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-13" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8531.jpg" alt="Drawing 16"></div><a
+                href="#drawings-15" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="drawings-15" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Drawings viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#drawings-14" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/drawings/IMG_8536.jpg" alt="Drawing 17"></div><a
+                href="#drawings-1" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+
+    <div id="storytelling-1" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Storytelling viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#storytelling-9" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/story-telling/Index.jpg" alt="Storytelling index"></div><a
+                href="#storytelling-2" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="storytelling-2" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Storytelling viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#storytelling-1" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/story-telling/1-so-what.jpg" alt="Storytelling panel 1">
+            </div><a href="#storytelling-3" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="storytelling-3" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Storytelling viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#storytelling-2" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/story-telling/2-take-action.jpg" alt="Storytelling panel 2">
+            </div><a href="#storytelling-4" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="storytelling-4" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Storytelling viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#storytelling-3" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/story-telling/3-right-data.jpg" alt="Storytelling panel 3">
+            </div><a href="#storytelling-5" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="storytelling-5" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Storytelling viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#storytelling-4" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/story-telling/4-right-visuals.jpg"
+                    alt="Storytelling panel 4"></div><a href="#storytelling-6" class="lightbox-nav lightbox-next"
+                aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="storytelling-6" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Storytelling viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#storytelling-5" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/story-telling/5-right-words.jpg" alt="Storytelling panel 5">
+            </div><a href="#storytelling-7" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="storytelling-7" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Storytelling viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#storytelling-6" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/story-telling/6-narrative.jpg" alt="Storytelling panel 6">
+            </div><a href="#storytelling-8" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="storytelling-8" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Storytelling viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#storytelling-7" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/story-telling/7-credible.jpg" alt="Storytelling panel 7">
+            </div><a href="#storytelling-9" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="storytelling-9" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Storytelling viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#storytelling-8" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><img src="images/story-telling/8-respect.jpg" alt="Storytelling panel 8">
+            </div><a href="#storytelling-1" class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
+
+    <div id="animations-1" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Animations viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#animations-8" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><video src="images/animation/video1.mp4" controls autoplay loop playsinline
+                    preload="metadata"></video></div><a href="#animations-2" class="lightbox-nav lightbox-next"
+                aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="animations-2" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Animations viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#animations-1" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><video src="images/animation/video2.mp4" controls autoplay loop playsinline
+                    preload="metadata"></video></div><a href="#animations-3" class="lightbox-nav lightbox-next"
+                aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="animations-3" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Animations viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#animations-2" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><video src="images/animation/video3.mp4" controls autoplay loop playsinline
+                    preload="metadata"></video></div><a href="#animations-4" class="lightbox-nav lightbox-next"
+                aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="animations-4" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Animations viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#animations-3" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><video src="images/animation/video4.mp4" controls autoplay loop playsinline
+                    preload="metadata"></video></div><a href="#animations-5" class="lightbox-nav lightbox-next"
+                aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="animations-5" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Animations viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#animations-4" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><video src="images/animation/video5.mp4" controls autoplay loop playsinline
+                    preload="metadata"></video></div><a href="#animations-6" class="lightbox-nav lightbox-next"
+                aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="animations-6" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Animations viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#animations-5" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><video src="images/animation/video6.mp4" controls autoplay loop playsinline
+                    preload="metadata"></video></div><a href="#animations-7" class="lightbox-nav lightbox-next"
+                aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="animations-7" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Animations viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#animations-6" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><video src="images/animation/video7.mp4" controls autoplay loop playsinline
+                    preload="metadata"></video></div><a href="#animations-8" class="lightbox-nav lightbox-next"
+                aria-label="Next item"></a>
+        </div>
+    </div>
+    <div id="animations-8" class="lightbox-slide"><a href="#lightbox-dismiss" class="lightbox-backdrop"
+            aria-label="Close viewer"></a>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Animations viewer"><a
+                href="#lightbox-dismiss" class="lightbox-close" aria-label="Close viewer">&times;</a><a
+                href="#animations-7" class="lightbox-nav lightbox-prev" aria-label="Previous item"></a>
+            <div class="lightbox-content"><video src="images/animation/orimarsflyingmachine.mp4" controls autoplay loop
+                    playsinline preload="metadata"></video></div><a href="#animations-1"
+                class="lightbox-nav lightbox-next" aria-label="Next item"></a>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">

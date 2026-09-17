@@ -824,6 +824,15 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
     box-shadow 0.2s ease;
 }
 
+.image-card,
+.video-card {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: inherit;
+}
+
 .drawings-grid[aria-label="Drawings gallery"] .drawing-card {
   max-width: 208px;
 }
@@ -853,6 +862,194 @@ a[href="projects/lifetime-movie-club.html"].theme-lifetime-movie-club
 .drawings-grid[aria-label="Animations gallery"] .drawing-card video {
   height: 100%;
   object-fit: cover;
+}
+
+.lightbox-slide {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+  z-index: 2000;
+}
+
+.lightbox-slide:target {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.lightbox-dismiss-target {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 12, 12, 0.82);
+}
+
+.lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, calc(100vw - 56px));
+  max-height: calc(100vh - 56px);
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) 56px;
+  align-items: center;
+  gap: 16px;
+}
+
+.lightbox-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 100%;
+  max-height: calc(100vh - 112px);
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  background: #000;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-content video {
+  object-fit: contain;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.16s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.65));
+}
+
+.lightbox-nav {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.lightbox-nav::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.45));
+}
+
+.lightbox-prev::before {
+  transform: rotate(-135deg);
+}
+
+.lightbox-next::before {
+  transform: rotate(45deg);
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.lightbox-nav:hover,
+.lightbox-nav:focus-visible {
+  opacity: 0.82;
+}
+
+.lightbox-close:focus-visible,
+.lightbox-nav:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
+}
+
+.lightbox-nav[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+@media (max-width: 720px) {
+  .lightbox-slide {
+    padding: 16px;
+  }
+
+  .lightbox-dialog {
+    width: min(100vw - 32px, 720px);
+    max-height: calc(100vh - 32px);
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .lightbox-content {
+    order: 1;
+  }
+
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+
+  .lightbox-close {
+    top: 0;
+    right: 0;
+  }
+
+  .lightbox-content img,
+  .lightbox-content video {
+    max-height: calc(100vh - 96px);
+  }
 }
 
 .drawings-grid[aria-label="Animations gallery"] .drawing-card video:fullscreen,

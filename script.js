@@ -34,6 +34,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  const lightboxTriggers = document.querySelectorAll(
+    ".drawings-grid .drawing-card[href^='#']",
+  );
+  const lightboxDismissTargets = ".lightbox-close, .lightbox-backdrop";
+  let lightboxScrollY = window.scrollY;
+
+  lightboxTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", function () {
+      lightboxScrollY = window.scrollY;
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    const dismissControl = e.target.closest(lightboxDismissTargets);
+
+    if (!dismissControl) {
+      return;
+    }
+
+    e.preventDefault();
+    history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}${window.location.search}`,
+    );
+
+    window.requestAnimationFrame(() => {
+      window.scrollTo(0, lightboxScrollY);
+    });
+  });
+
   // Lazy loading images for better performance
   const images = document.querySelectorAll(".portfolio-link img");
 
@@ -143,8 +174,8 @@ document.addEventListener("DOMContentLoaded", function () {
           title.classList.add("hidden");
         }
       });
-    });
   });
+
 });
 
 // Handle external links
