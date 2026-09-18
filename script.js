@@ -21,6 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
   anchorLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
+
+      if (
+        this.matches(
+          ".drawing-card, .lightbox-nav, .lightbox-close, .lightbox-backdrop",
+        )
+      ) {
+        return;
+      }
+
       if (href !== "#") {
         e.preventDefault();
         const target = document.querySelector(href);
@@ -37,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const lightboxTriggers = document.querySelectorAll(
     ".drawings-grid .drawing-card[href^='#']",
   );
-  const lightboxDismissTargets = ".lightbox-close, .lightbox-backdrop";
   let lightboxScrollY = window.scrollY;
 
   lightboxTriggers.forEach((trigger) => {
@@ -46,23 +54,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  document.addEventListener("click", function (e) {
-    const dismissControl = e.target.closest(lightboxDismissTargets);
-
-    if (!dismissControl) {
-      return;
+  window.addEventListener("hashchange", function () {
+    if (
+      window.location.hash === "#lightbox-dismiss" ||
+      window.location.hash === ""
+    ) {
+      window.requestAnimationFrame(() => {
+        window.scrollTo(0, lightboxScrollY);
+      });
     }
-
-    e.preventDefault();
-    history.replaceState(
-      null,
-      "",
-      `${window.location.pathname}${window.location.search}`,
-    );
-
-    window.requestAnimationFrame(() => {
-      window.scrollTo(0, lightboxScrollY);
-    });
   });
 
   // Lazy loading images for better performance
